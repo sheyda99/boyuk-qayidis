@@ -380,6 +380,21 @@ header.minimize .nav-contact {
     color: #9b9b9b;
 }
 
+
+/************************ PARTNERS & CUSTOMERS SECTION ************************/
+.partners-customers-section {
+    padding: 20px 0;
+}
+.partners-customers-section h3 {
+    color: var(--black);
+}
+.partners-customers-section .line::after {
+    background-color: var(--purple);
+}
+.partners-customers-section .owl-theme .owl-dots .owl-dot {
+    display: none !important;
+}
+
 /************************ PROJECTS SECTION ************************/
 .projects-section::before {
     content: "";

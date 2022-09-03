@@ -10,6 +10,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/owlcarousel/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/owlcarousel/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -200,9 +202,54 @@
             </div>
         </div>
 
-        <div class="container">
-            <div class="client"></div>
-        </div>
+        <section class="section partners-customers-section">
+            <div class="container">
+                <h3>Tərəfdaş və Sifarişçilər</h3>
+                <div class="line"></div>
+                <div class="owl-carousel owl-theme owl-loaded owl-drag">
+                    <div class="owl-stage-outer">
+                        <div class="row owl-stage" style="align-items: center;">
+                            <div class="owl-item px-4">
+                                <div class="item">
+                                    <img src="assets/img/c1.png" alt="">
+                                </div>
+                            </div>
+                            <div class="owl-item px-4">
+                                <div class="item">
+                                    <img src="assets/img/c2.png" alt="">
+                                </div>
+                            </div>                
+                            <div class="owl-item px-4">
+                                <div class="item">
+                                    <img src="assets/img/c3.png" alt="">
+                                </div>
+                            </div>                
+                            <div class="owl-item px-4">
+                                <div class="item">
+                                    <img src="assets/img/c4.png" alt="">
+                                </div>
+                            </div>                
+                            <div class="owl-item px-4">
+                                <div class="item">
+                                    <img src="assets/img/c5.png" alt="">
+                                </div>
+                            </div>                
+                            <div class="owl-item px-4">
+                                <div class="item">
+                                    <img src="assets/img/c2.png" alt="">
+                                </div>
+                            </div>                
+                            <div class="owl-item px-4">
+                                <div class="item">
+                                    <img src="assets/img/c3.png" alt="">
+                                </div>
+                            </div>                
+                        </div>
+                    </div>
+                    <div class="owl-nav disabled"></div>
+                </div>
+            </div>
+        </section>
 
         <section class="section projects-section">
             <div class="container">
@@ -321,9 +368,31 @@
 
     <script src="assets/js/jquery-3.6.1.min.js"></script>
     <script src="assets/js/bootstrap.bundle.js"></script>
+    <script src="assets/owlcarousel/js/owl.carousel.min.js"></script>
     <script src="assets/js/script.js"></script>
     <script>
-        $('.carousel').carousel()
+        var owl = $('.owl-carousel');
+        owl.owlCarousel({
+            // items: 5,        
+            loop: true,
+            margin: 10,
+            nav: false,
+            dots: false,
+            autoplay: true,
+            autoplayTimeout: 2e3,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 2
+                },
+                600: {
+                    items: 4
+                },
+                1000: {
+                    items: 5
+                }
+            }
+        });
     </script>
 </body>
 </html>
