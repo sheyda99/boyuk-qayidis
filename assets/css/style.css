@@ -291,9 +291,6 @@ header.minimize {
 header.minimize .logo a {
     height: 100px;
 }
-header.minimize .logo img {
-    padding: 10px 0;
-}
 header.minimize .nav-contact {
     display: none;
 }
