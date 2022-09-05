@@ -105,7 +105,7 @@ a {
     transform: translateY(-50%);
     width: 18px;
     height: 2px;
-    background-color: var(--white);
+    background-color: var(--black);
     right: 10px;
 }
 #mobile-menu-trigger.minimize .mobile-menu-icon {
