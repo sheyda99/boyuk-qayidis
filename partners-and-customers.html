@@ -4,12 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Əlaqə | Böyük Qayıdış</title>
+    <title>Tərəfdaş və Sifarişçilər | Böyük Qayıdış</title>
     <script src="https://kit.fontawesome.com/f9a01ea1da.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/owlcarousel/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="assets/owlcarousel/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -22,10 +24,10 @@
             <li><a href="index.html">Əsas səhifə</a></li>
             <li><a href="about.html">Haqqımızda</a></li>
             <li><a href="services.html">Xidmətlər</a></li>
-            <li><a href="partners-and-customers.html">Tərəfdaş və Sifarişçilər</a></li>
+            <li><a href="#">Tərəfdaş və Sifarişçilər</a></li>
             <li><a href="projects.html">Layihələr</a></li>
             <li><a href="news.html">Xəbərlər</a></li>
-            <li><a href="#">Əlaqə</a></li>
+            <li><a href="contact.html">Əlaqə</a></li>
         </ul>
     </nav>
 
@@ -45,10 +47,10 @@
                             <li><a href="index.html">Əsas səhifə</a></li>
                             <li><a href="about.html">Haqqımızda</a></li>
                             <li><a href="services.html">Xidmətlər</a></li>
-                            <li><a href="partners-and-customers.html">Tərəfdaş və Sifarişçilər</a></li>
+                            <li><a href="#" class="active">Tərəfdaş və Sifarişçilər</a></li>
                             <li><a href="projects.html">Layihələr</a></li>
                             <li><a href="news.html">Xəbərlər</a></li>
-                            <li><a href="#" class="active">Əlaqə</a></li>
+                            <li><a href="contact.html">Əlaqə</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -56,78 +58,94 @@
         </div>
     </header>
 
-    <main id="contact-page">
+    <main id="partners-and-customers-page">
         <section class="banner single-page-banner">
-            <div class="banner-bg" style="background-image: url('assets/img/banner2.jpg');">
+            <div class="banner-bg" style="background-image: url('assets/img/banner1.jpg');">
                 <div class="carousel-caption text-start mt-5">
                     <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="index.html">Əsas Səhifə</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Əlaqə</li>
+                            <li class="breadcrumb-item active" aria-current="page">Tərəfdaş və Sifarişçilər</li>
                         </ol>
                     </nav>
-                    <h2>Əlaqə</h2>
+                    <h2>Tərəfdaş və Sifarişçilər</h2>
                 </div>
             </div>
         </section>
 
-        <main class="container my-5 py-5">
-            <div class="form-info pb-5">
+        <section class="section mt-5 pt-5 text-start">
+            <div class="container py-5">
+                <h3>Tərəfdaşlar</h3>
+                <div class="line"></div>
                 <div class="row">
-                    <div class="col-12 col-md-6 col-xl-3 form-contact-news form-location text-center">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <p><strong>Məkan:</strong> <span>Kral Hüseyn küç 64B</span></p>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 text-center">
+                        <div class="card mb-3 p-3">
+                            <div style="background-image: url('assets/img/c1.png');"></div>
+                        </div>
+                        <h4>Company name</h4>
                     </div>
-                    <div class="col-12 col-md-6 col-xl-3 form-contact-news form-phone text-center">
-                        <i class="fa-solid fa-phone"></i>
-                        <p><strong>Telefon:</strong> <span>+994 (99) 123-45-67</span></p>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 text-center">
+                        <div class="card mb-3 p-3">
+                            <div style="background-image: url('assets/img/c2.png');"></div>
+                        </div>
+                        <h4>Company name</h4>
                     </div>
-                    <div class="col-12 col-md-6 col-xl-3 form-contact-news form-email text-center">
-                        <i class="fa-solid fa-envelope"></i>
-                        <p><strong>Email:</strong> <span>example@email.com</span></p>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 text-center">
+                        <div class="card mb-3 p-3">
+                            <div style="background-image: url('assets/img/c3.png');"></div>
+                        </div>
+                        <h4>Company name</h4>
                     </div>
-                    <div class="col-12 col-md-6 col-xl-3 form-contact-news form-website text-center">
-                        <i class="fa-solid fa-globe"></i>
-                        <p><strong>Website:</strong> <span>boyukqayidish.az</span></p>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 text-center">
+                        <div class="card mb-3 p-3">
+                            <div style="background-image: url('assets/img/c4.png');"></div>
+                        </div>
+                        <h4>Company name</h4>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 text-center">
+                        <div class="card mb-3 p-3">
+                            <div style="background-image: url('assets/img/c5.png');"></div>
+                        </div>
+                        <h4>Company name</h4>
                     </div>
                 </div>
             </div>
 
-            <div class="contact mt-5 py-5">
-                <div class="contact-text">
-                    <p>Xidmətlərimizlə maraqlandığınız üçün təşəkkür edirik!</p>
-                    <h2>Aşağıdakı formu dolduraraq bizə onlayn müraciət edə bilərsiniz.</h2>
+            <div class="container">
+                <h3>Sifarişçilər</h3>
+                <div class="line"></div>
+                <div class="row">
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 text-center">
+                        <div class="card mb-3 p-3">
+                            <div style="background-image: url('assets/img/c1.png');"></div>
+                        </div>
+                        <h4>Company name</h4>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 text-center">
+                        <div class="card mb-3 p-3">
+                            <div style="background-image: url('assets/img/c2.png');"></div>
+                        </div>
+                        <h4>Company name</h4>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 text-center">
+                        <div class="card mb-3 p-3">
+                            <div style="background-image: url('assets/img/c3.png');"></div>
+                        </div>
+                        <h4>Company name</h4>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 text-center">
+                        <div class="card mb-3 p-3">
+                            <div style="background-image: url('assets/img/c4.png');"></div>
+                        </div>
+                        <h4>Company name</h4>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 text-center">
+                        <div class="card mb-3 p-3">
+                            <div style="background-image: url('assets/img/c5.png');"></div>
+                        </div>
+                        <h4>Company name</h4>
+                    </div>
                 </div>
-            </div>
-
-            <div class="contact-form-image pt-3">
-                <div class="contact-form">
-                    <form action="#" method="post">
-                        <div class="form-group ">
-                            <input type="text" id="" placeholder="Ad Soyadınız">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="" placeholder="Telefon nömrəniz">
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="" placeholder="Email">
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="" placeholder="Mövzu">
-                        </div>
-                        <div class="form-group">
-                            <textarea name="" id="" cols="30" rows="10" placeholder="Mesajınız"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-purple">Göndər</button>
-                    </form>
-                </div>
-            </div>
-        </main>
-
-        <section class="mapouter">
-            <div class="gmap_canvas">
-                <iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=Kral%20H%C3%BCseyn%20k%C3%BC%C3%A7%2064B&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
-                <a href="https://fmovies-online.net"></a><br>
             </div>
         </section>
     </main>
@@ -165,6 +183,33 @@
 
     <script src="assets/js/jquery-3.6.1.min.js"></script>
     <script src="assets/js/bootstrap.bundle.js"></script>
+    <script src="assets/owlcarousel/js/owl.carousel.min.js"></script>
     <script src="assets/js/script.js"></script>
+    <script>
+        var owl = $('.owl-carousel');
+        owl.owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: false,
+            dots: false,
+            autoplay: true,
+            autoplayTimeout: 2e3,
+            autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                400: {
+                    items: 2
+                },
+                700: {
+                    items: 3
+                },
+                1000: {
+                    items: 5
+                }
+            }
+        });
+    </script>
 </body>
 </html>

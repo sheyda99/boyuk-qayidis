@@ -1,8 +1,8 @@
 :root{
-    --purple: #9F40B8;
-    --green: #ACCC2B;
-    --black: #141615;
-    --white: #FBFDFC;
+    --purple: #9D41B6;
+    --green: #BAD330;
+    --black: #222222;
+    --white: #FFFFFF;
 }
 
 
@@ -214,11 +214,11 @@ a {
 
 /************************ HEADER ************************/
 header {
-    background-color: transparent;
-    color: var(--white);
+    background-color: #fff;
+    color: var(--black);
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow: 0 3px 4px rgb(0 0 0 / 7%);
-    height: 135px;
+    height: 100px;
     position: fixed;
     right: 0;
     left: 0;
@@ -228,12 +228,12 @@ header {
 }
 header .logo a {
     display: inline-block;
-    height: 135px;
+    height: 100px;
 }
 header .logo img {
     display: inline-block;
     height: 100%;
-    padding: 27.5px 0;
+    padding: 15px 0;
 }
 header .col-10 {
     display: flex;
@@ -345,7 +345,7 @@ header.minimize .nav-contact {
 
 /************************ ABOUT US ************************/
 .about-us {
-    padding-top: 130px;
+    padding-top: 100px;
 }
 .about-us h3,
 .services h3 {
@@ -405,12 +405,18 @@ header.minimize .nav-contact {
     display: inline-block;
     width: 100%;
 }
+@media (max-width: 768px) {
+    .about-us h3,
+    .services h3 {
+        font-size: 3rem;
+    }
+}
 
 
 /************************ SERVICES ************************/
 .services {
     background-color: var(--white);
-    padding: 130px 0 50px;
+    padding: 100px 0 50px;
 }
 .services h4 {
     color: var(--purple);
@@ -551,7 +557,6 @@ header.minimize .nav-contact {
 /************************ PARTNERS & CUSTOMERS SECTION ************************/
 .partners-customers-section {
     margin: 0 0 30px;
-    padding-top: 120px;
 }
 .partners-customers-section h3 {
     color: var(--black);
@@ -650,8 +655,9 @@ header.minimize .nav-contact {
 /************************ FOOTER ************************/
 footer {
     padding: 50px 0 0;
-    background-color: var(--white);
-    color: var(--black);
+    background-color: var(--purple);
+    color: var(--white);
+    margin-top: 50px;
 }
 footer .footer-main p {
     margin-top: 30px;
@@ -673,7 +679,7 @@ footer .footer-main ul:last-child li {
     margin-right: 20px;
 }
 footer .footer-main ul:last-child li a {
-    color: var(--black);
+    color: inherit;
     transition: 0.5s;
 }
 footer .footer-main ul:last-child li a:hover {
@@ -685,7 +691,8 @@ footer .copyright {
     text-align: center;
 }
 footer .copyright a {
-    color: var(--purple);
+    color: var(--white);
+    font-weight: 600;
 }
 
 
@@ -711,10 +718,9 @@ footer .copyright a {
 .banner.single-page-banner .carousel-caption,
 .banner.single-page-banner .carousel-caption {
     width: 80%;
-    top: 50%;
     left: 50%;
     right: auto;
-    bottom: auto;
+    bottom: 0;
     z-index: 10;
     transform: translateX(-50%) translateY(-50%);
 }
@@ -744,14 +750,53 @@ footer .copyright a {
     font-size: 1.5rem;
 }
 .breadcrumb .breadcrumb-item a {
+    color: inherit;
+    transition: 0.5s;
+}
+.breadcrumb .breadcrumb-item a:hover {
     color: var(--purple);
 }
 .breadcrumb .breadcrumb-item:last-child {
     color: var(--white);
-    font-weight: 600;
 }
 .breadcrumb .breadcrumb-item::before {
     color: var(--white);
+}
+
+
+/************************ PARTNERS & CUSTOMERS PAGE ************************/
+#partners-and-customers-page .line::after {
+    background-color: var(--purple);
+    left: 0;
+    transform: none;
+}
+#partners-and-customers-page .card {
+    cursor: pointer;
+    transition: 0.5s;
+}
+#partners-and-customers-page .card:hover {
+    box-shadow: 0 0 15px 0 rgb(40 40 40 / 30%);
+}
+#partners-and-customers-page .card div {
+    height: 200px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#partners-and-customers-page .section .col-12 {
+    height: 320px;
+}
+#partners-and-customers-page .section h4 {
+    font-size: 2rem;
+    margin-top: 15px;
+}
+@media (max-width: 576px) {
+    #partners-and-customers-page .section {
+        padding: 0 50px;
+    }
+    #partners-and-customers-page h3 {
+        font-size: 3rem;
+    }
 }
 
 

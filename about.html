@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Əsas Səhifə | Böyük Qayıdış</title>
+    <title>Haqqımızda | Böyük Qayıdış</title>
     <script src="https://kit.fontawesome.com/f9a01ea1da.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,8 +21,8 @@
     <div class="overlay"></div>
     <nav id="mobile-nav" class="mobile-nav">
         <ul class="mobile-menu">
-            <li><a href="#">Əsas səhifə</a></li>
-            <li><a href="about.html">Haqqımızda</a></li>
+            <li><a href="index.html">Əsas səhifə</a></li>
+            <li><a href="#">Haqqımızda</a></li>
             <li><a href="services.html">Xidmətlər</a></li>
             <li><a href="partners-and-customers.html">Tərəfdaş və Sifarişçilər</a></li>
             <li><a href="projects.html">Layihələr</a></li>
@@ -36,7 +36,7 @@
             <div class="row">
                 <div class="col-2">
                     <div class="logo">
-                        <a href="#">
+                        <a href="index.html">
                             <img src="assets/img/logo/logo.svg" alt="Böyük Qayıdış logo">
                         </a>
                     </div>
@@ -44,8 +44,8 @@
                 <div class="col-10">
                     <nav id="primary-menu" class="primary-menu">
                         <ul>
-                            <li><a href="#" class="active">Əsas səhifə</a></li>
-                            <li><a href="about.html">Haqqımızda</a></li>
+                            <li><a href="index.html">Əsas səhifə</a></li>
+                            <li><a href="#" class="active">Haqqımızda</a></li>
                             <li><a href="services.html">Xidmətlər</a></li>
                             <li><a href="partners-and-customers.html">Tərəfdaş və Sifarişçilər</a></li>
                             <li><a href="projects.html">Layihələr</a></li>
@@ -59,50 +59,21 @@
     </header>
 
     <main>
-        <section class="banner">
-            <div id="carousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class=""></button>
-                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" class=""></button>
-                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" class="active" aria-current="true"></button>
+        <section class="banner single-page-banner">
+            <div class="banner-bg" style="background-image: url('assets/img/banner1.jpg');">
+                <div class="carousel-caption text-start mt-5">
+                    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">Əsas Səhifə</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Haqqımızda</li>
+                        </ol>
+                    </nav>
+                    <h2>Haqqımızda</h2>
                 </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active" style="background-image: url('assets/img/banner1.jpg');">
-                        <div class="carousel-caption d-none d-md-block text-start" style="margin-bottom: 150px !important;">
-                            <h2>Haqqımızda</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At iste asperiores maiores. Non voluptatum aliquid, quod quae, atque expedita, harum iste delectus voluptates amet natus.</p>
-                            <a href="#about-us" class="btn btn-white">Daha Ətraflı</a>
-                        </div>
-                    </div>
-                    <div class="carousel-item" style="background-image: url('assets/img/banner2.jpg');">
-                        <div class="carousel-caption d-none d-md-block text-start" style="margin-bottom: 150px !important;">
-                            <h2>Layihələrimiz</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem ut iure officiis, molestiae nam repellendus voluptas placeat iusto maiores veritatis laborum minima nobis dignissimos architecto nemo natus provident deleniti hic?</p>
-                            <a href="projects.html" class="btn btn-white me-3">Daha Çox</a>
-                            <a href="contact.html" class="btn btn-white">Əlaqə</a>
-                        </div>
-                    </div>
-                    <div class="carousel-item" style="background-image: url('assets/img/banner3.jpg');">
-                        <div class="carousel-caption d-none d-md-block text-end" style="margin-bottom: 150px !important;">
-                            <h2>Xidmətlərimiz</h2>
-                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusantium cum minus laboriosam, placeat, deserunt obcaecati voluptate deleniti esse aliquam repellat eum iure veniam voluptas et.</p>
-                            <a href="#services" class="btn btn-white me-3">Daha Çox</a>
-                            <a href="contact.html" class="btn btn-white">Əlaqə</a>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
-                    <i class="fa-solid fa-chevron-left"></i>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
-                    <i class="fa-solid fa-chevron-right"></i>
-                    <span class="visually-hidden">Next</span>
-                </button>
             </div>
         </section>
 
-        <section id="about-us" class="about-us">
+        <section id="about-us" class="about-us pb-5">
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-lg-8">
@@ -143,46 +114,6 @@
                     <div class="col-4 d-none d-lg-block">
                         <div class="image-holder">
                             <img src="assets/img/man.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="services" class="services">
-            <div class="container">
-                <h4>Təklif etdiyimiz xidmətlər</h4>
-                <div class="row services-info">
-                    <div class="col-12 col-lg-6">
-                        <h3>Dünyanın çoxmillətli şirkətləri üçün aparıcı logistikanı idarə edirik.</h3>
-                    </div>
-                    <div class="col-12 col-lg-6">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia et debitis quibusdam optio a ea reiciendis voluptatibus, veniam est quis, voluptates molestias ab? Eos suscipit at porro unde sit nesciunt, repellendus minus, quis totam ipsum iure ipsam veritatis. Voluptas atque saepe optio. Illo quod libero commodi nemo, magnam maiores id.</p>
-                    </div>
-                </div>
-                <div class="row mt-5">
-                    <div class="col-12 col-md-4 service-item">
-                        <div class="service__img" style="background-image: url('assets/img/card1.jpg');"></div>
-                        <div class="service__overlay">
-                            <i class="fa-solid fa-plane"></i>
-                            <h4>Air Freight</h4>
-                            <p>We have more than twenty years of experience. We’ve become expert in freight transportation by air and all its related.</p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4 service-item">
-                        <div class="service__img" style="background-image: url('assets/img/card2.jpg');"></div>
-                        <div class="service__overlay">
-                            <i class="fa-solid fa-ship"></i>
-                            <h4>Air Freight</h4>
-                            <p>We have more than twenty years of experience. We’ve become expert in freight transportation by air and all its related.</p>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4 service-item">
-                        <div class="service__img" style="background-image: url('assets/img/card3.jpg');"></div>
-                        <div class="service__overlay">
-                            <i class="fa-solid fa-truck-fast"></i>
-                            <h4>Air Freight</h4>
-                            <p>We have more than twenty years of experience. We’ve become expert in freight transportation by air and all its related.</p>
                         </div>
                     </div>
                 </div>
@@ -249,93 +180,6 @@
                     </div>
                     <div class="owl-nav disabled"></div>
                 </div>
-            </div>
-        </section>
-
-        <section class="section projects-section">
-            <div class="container">
-                <h3>Layihələr</h3>
-                <div class="line"></div>
-                <div class="row">
-                    <a href="#" class="col-12 col-md-4">
-                        <div class="card">
-                            <div class="card-img-top" style="background-image: url('assets/img/projects1.jpg');"></div>
-                            <div class="card-body">
-                                <h5 class="card-title">Project title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" class="col-12 col-md-4">
-                        <div class="card">
-                            <div class="card-img-top" style="background-image: url('assets/img/projects2.jpg');"></div>
-                            <div class="card-body">
-                                <h5 class="card-title">Project title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" class="col-12 col-md-4">
-                        <div class="card">
-                            <div class="card-img-top" style="background-image: url('assets/img/projects3.jpg');"></div>
-                            <div class="card-body">
-                                <h5 class="card-title">Project title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <a href="projects.html" class="btn btn-purple mt-5">Daha Çox</a>
-            </div>
-        </section> 
-
-        <section class="section news-section pb-5">
-            <div class="container">
-                <h3>Xəbərlər</h3>
-                <div class="line"></div>
-                <p>Follow our latest news and thoughts which focuses exclusively on insight, industry trends, top news headlines.</p>
-                <div class="row">
-                    <div class="col-12 col-md-4">
-                        <div class="card">
-                            <a href="#">
-                                <div class="card-img-top" style="background-image: url('assets/img/news1.jpg');"></div>
-                            </a>
-                            <div class="card-body">
-                                <span>30 Avqust 2022</span>
-                                <a href="#"><h5 class="card-title">News title</h5></a>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="read-more">Daha ətraflı</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <div class="card">
-                            <a href="#">
-                                <div class="card-img-top" style="background-image: url('assets/img/news2.jpg');"></div>
-                            </a>
-                            <div class="card-body">
-                                <span>30 Avqust 2022</span>
-                                <a href="#"><h5 class="card-title">News title</h5></a>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="read-more">Daha ətraflı</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <div class="card">
-                            <a href="#">
-                                <div class="card-img-top" style="background-image: url('assets/img/news3.jpg');"></div>
-                            </a>
-                            <div class="card-body">
-                                <span>30 Avqust 2022</span>
-                                <a href="#"><h5 class="card-title">News title</h5></a>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class="read-more">Daha ətraflı</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <a href="news.html" class="btn btn-purple mt-4">Daha Çox</a>
             </div>
         </section>
     </main>
