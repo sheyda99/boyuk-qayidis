@@ -50,6 +50,13 @@ a {
     color: var(--white);
 }
 
+@media (max-width: 567px) {
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
 
 /************************ BACK-TO-TOP BUTTON ************************/
 .back-to-top {
@@ -277,6 +284,7 @@ header .primary-menu ul li a.active::after {
     }
 }
 
+
 /************************ BANNER CAROUSEL ************************/
 .banner .carousel-inner .carousel-item {
     height: 100vh;
@@ -310,6 +318,11 @@ header .primary-menu ul li a.active::after {
 .banner .carousel-control-prev i,
 .banner .carousel-control-next i {
     font-size: 50px;
+}
+@media (max-width: 567px) {
+    .banner .carousel-inner .carousel-item {
+        height: 70vh;
+    }
 }
 
 
@@ -701,6 +714,12 @@ footer .copyright a {
     }
 }
 @media (max-width: 576px) {
+    .banner.single-page-banner .banner-bg {
+        height: 70vh;
+    }
+    .banner.single-page-banner .carousel-caption {
+        bottom: 70px;
+    }
     .banner.single-page-banner .carousel-caption h2 {
         font-size: 4rem;
     }
@@ -880,6 +899,10 @@ footer .copyright a {
 .single-blog .blog-title-img:hover img {
     transform: scale(1.1);
 }
+.single-blog h3 {
+    width: 90%;
+    margin: 0 auto;
+}
 .single-blog span {
     font-size: 1.5rem;
     color: #9b9b9b;
@@ -898,6 +921,16 @@ footer .copyright a {
     display: inline-block;
     width: 100%;
     margin-bottom: 20px;
+}
+@media (max-width: 768px) {
+    .sidebar {
+        margin-top: 50px;
+    }
+    .single-blog .blog-title-img,
+    .single-blog h3,
+    .single-blog .single-blog-content {
+        width: 100%;
+    }
 }
 
 
