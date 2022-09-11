@@ -1,0 +1,112 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+
+    <main>
+        <section class="banner single-page-banner">
+            <div class="banner-bg" style="background-image: url('../../core/static/img/banner2.jpg');">
+                <div class="carousel-caption text-start mt-5">
+                    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{% url 'home' %}">Əsas Səhifə</a></li>
+                            <li class="breadcrumb-item"><a href="{% url 'projects' %}">Layihələr</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">{{projects.title}}</li>
+                        </ol>
+                    </nav>
+                    <h2>Layihələr</h2>
+                </div>
+            </div>
+        </section>
+
+        <section class="section news-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-8 single-blog">
+                        <div class="blog-title-img">
+                            <img src="{% static 'img/news1.jpg' %}" alt="project 1">
+                        </div>
+                        <h3 class="mt-5 pb-3">{{projects.title}}</h3>
+                        <span>{{projects.created_at}}</span>
+                        <div class="line mt-4"></div>
+                        <div class="single-blog-content">
+                            <!-- -------------------------------- -->
+
+                            {% if projects.description1 %}
+                            <p>{{projects.description1}}</p>
+                            {% endif %}
+
+                            {% if projects.image1 %}
+                            <img src="{{ projects.image1.url }}" alt="Img 1">
+                            {% endif %}
+
+                            <!-- -------------------------------- -->
+
+                            {% if projects.description2 %}
+                            <p>{{projects.description2}}</p>
+                            {% endif %}
+
+                            {% if projects.image2 %}
+                            <img src="{{ projects.image2.url }}" alt="Img 1">
+                            {% endif %}
+
+                            <!-- -------------------------------- -->
+
+                            {% if projects.description3 %}
+                            <p>{{projects.description3}}</p>
+                            {% endif %}
+
+                            {% if projects.image3 %}
+                            <img src="{{ projects.image3.url }}" alt="Img 1">
+                            {% endif %}
+
+                            <!-- -------------------------------- -->
+
+                            {% if projects.description4 %}
+                            <p>{{projects.description4}}</p>
+                            {% endif %}
+
+                            {% if projects.image4 %}
+                            <img src="{{ projects.image4.url }}" alt="Img 1">
+                            {% endif %}
+
+                            <!-- -------------------------------- -->
+
+                            {% if projects.description5 %}
+                            <p>{{projects.description5}}</p>
+                            {% endif %}
+
+                            {% if projects.image5 %}
+                            <img src="{{ projects.image5.url }}" alt="Img 1">
+                            {% endif %}
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <div class="sidebar text-start">
+                            <h4>Digər layihələr</h4>
+                            <div class="line"></div>
+                            <div class="box">
+                                <a href="project-details.html">
+                                    <div class="box-img" style="background-image: url('../static/img/projects2.jpg');"></div>
+                                </a>
+                                <span>30 Avqust 2022</span>
+                                <a href="project-details.html"><h5>Lorem ipsum dolor sit amet consectetur</h5></a>
+                            </div>
+                            <div class="box">
+                                <a href="project-details.html">
+                                    <div class="box-img" style="background-image: url('../static/img/projects3.jpg');"></div>
+                                </a>
+                                <span>30 Avqust 2022</span>
+                                <a href="project-details.html"><h5>Lorem ipsum dolor sit amet consectetur</h5></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    {% endblock %}

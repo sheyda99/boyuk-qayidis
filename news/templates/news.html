@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+    
+    <main id="news-page">
+        <section class="banner single-page-banner">
+            <div class="banner-bg" style="background-image: url('../static/img/banner2.jpg');">
+                <div class="carousel-caption text-start mt-5">
+                    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{% url 'home' %}">Əsas Səhifə</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Xəbərlər</li>
+                        </ol>
+                    </nav>
+                    <h2>Xəbərlər</h2>
+                </div>
+            </div>
+        </section>
+
+        <section class="section news-section">
+            <div class="container">
+                <div class="row">
+                    {% for i in news %}
+                    <div class="col-12 col-md-4">
+                        <div class="card">
+
+                            <a href="{{i.get_absolute_url}}">
+                                <div class="card-img-top" style="background-image: url('{{i.image.url}}');"></div>
+                            </a>
+                            <div class="card-body">
+                                <span>{{i.created_at}}</span>
+                                <a href="{{i.get_absolute_url}}"><h5 class="card-title">{{i.title}}</h5></a>
+                                <p class="card-text">{{i.description1|truncatechars:85}}</p>
+                                <a href="{{i.get_absolute_url}}" class="read-more">Daha ətraflı</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                    <!-- <div class="col-12 col-md-4">
+                        <div class="card">
+                            <a href="news-details.html">
+                                <div class="card-img-top" style="background-image: url('../static/img/news2.jpg');"></div>
+                            </a>
+                            <div class="card-body">
+                                <span>30 Avqust 2022</span>
+                                <a href="news-details.html"><h5 class="card-title">News title</h5></a>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="news-details.html" class="read-more">Daha ətraflı</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <div class="card">
+                            <a href="news-details.html">
+                                <div class="card-img-top" style="background-image: url('../static/img/news3.jpg');"></div>
+                            </a>
+                            <div class="card-body">
+                                <span>30 Avqust 2022</span>
+                                <a href="news-details.html"><h5 class="card-title">News title</h5></a>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="news-details.html" class="read-more">Daha ətraflı</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <div class="card">
+                            <a href="news-details.html">
+                                <div class="card-img-top" style="background-image: url('../static/img/news1.jpg');"></div>
+                            </a>
+                            <div class="card-body">
+                                <span>30 Avqust 2022</span>
+                                <a href="news-details.html"><h5 class="card-title">News title</h5></a>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="news-details.html" class="read-more">Daha ətraflı</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <div class="card">
+                            <a href="news-details.html">
+                                <div class="card-img-top" style="background-image: url('../static/img/news2.jpg');"></div>
+                            </a>
+                            <div class="card-body">
+                                <span>30 Avqust 2022</span>
+                                <a href="news-details.html"><h5 class="card-title">News title</h5></a>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="news-details.html" class="read-more">Daha ətraflı</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <div class="card">
+                            <a href="news-details.html">
+                                <div class="card-img-top" style="background-image: url('../static/img/news3.jpg');"></div>
+                            </a>
+                            <div class="card-body">
+                                <span>30 Avqust 2022</span>
+                                <a href="news-details.html"><h5 class="card-title">News title</h5></a>
+                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <a href="news-details.html" class="read-more">Daha ətraflı</a>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+
+                <nav class="page-pagination">
+                    <ul class="pagination">
+                        {% if page_obj.has_previous %}
+                      <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}"><i class="fa-solid fa-angle-left"></i></a></li>
+                        {% endif %}
+                      <li class="page-item"><a class="page-link" href="#">{{ page_obj.number }}</a></li>
+                      <li class="page-item"><a class="page-link" href="#">of</a></li>
+                      <li class="page-item"><a class="page-link" href="#">{{ page_obj.paginator.num_pages }}</a></li>
+                        {% if page_obj.has_next %}
+                      <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}"><i class="fa-solid fa-angle-right"></i></a></li>
+                        {% endif %}
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </main>
+
+    {% endblock %}

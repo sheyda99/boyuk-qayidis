@@ -1,0 +1,169 @@
+
+
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+
+    <main>
+        <section class="banner single-page-banner">
+            <div class="banner-bg" style="background-image: url('../static/img/banner3.jpg');">
+                <div class="carousel-caption text-start mt-5">
+                    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{% url 'home' %}">Əsas Səhifə</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Xidmətlər</li>
+                        </ol>
+                    </nav>
+                    <h2>Xidmətlər</h2>
+                </div>
+            </div>
+        </section>
+
+        <section class="services">
+            <div class="container">
+                <h4>Təklif etdiyimiz xidmətlər</h4>
+                <div class="row services-info">
+                    <div class="col-12 col-lg-7">
+                        <h3>Dünyanın çoxmillətli şirkətləri üçün aparıcı logistikanı idarə edirik.</h3>
+                    </div>
+                    <div class="col-12 col-lg-5">
+                        <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia et debitis quibusdam optio a ea reiciendis voluptatibus, veniam est quis, voluptates molestias ab? Eos suscipit at porro unde sit nesciunt, repellendus minus, quis totam ipsum iure ipsam veritatis. Voluptas atque saepe optio. Illo quod libero commodi nemo, magnam maiores id.</p> -->
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-12 col-md-4 service-item">
+                        <div class="service__img" style="background-image: url('../static/img/card1.jpg');"></div>
+                        <div class="service__overlay">
+                            <!-- <i class="fa-solid fa-plane"></i> -->
+                            <h4>Təchizat</h4>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 service-item">
+                        <div class="service__img" style="background-image: url('../static/img/card2.jpg');"></div>
+                        <div class="service__overlay">
+                            <!-- <i class="fa-solid fa-ship"></i> -->
+                            <h4>Kommersiya və dövlət təşkilatları üçün bütün zəruri materialların satın alınması</h4>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 service-item">
+                        <div class="service__img" style="background-image: url('../static/img/card3.jpg');"></div>
+                        <div class="service__overlay">
+                            <!-- <i class="fa-solid fa-truck-fast"></i> -->
+                            <h4>Xaricdən məhsulların idxalı</h4>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 service-item">
+                        <div class="service__img" style="background-image: url('../static/img/card4.jpg');"></div>
+                        <div class="service__overlay">
+                            <!-- <i class="fa-solid fa-truck-fast"></i> -->
+                            <h4>Gömrük rəsmiləşdirilməsi</h4>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 service-item">
+                        <div class="service__img" style="background-image: url('../static/img/card5.jpg');"></div>
+                        <div class="service__overlay">
+                            <!-- <i class="fa-solid fa-truck-fast"></i> -->
+                            <h4>Təşkilati məsələlərdə dəstək xidməti</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section partners-customers-section">
+            <div class="container">
+                <h3>Tərəfdaş və Sifarişçilər</h3>
+                <div class="line"></div>
+                <div class="owl-carousel owl-theme owl-loaded owl-drag">
+                    <div class="owl-stage-outer">
+                        <div class="row owl-stage" style="align-items: center;">
+                            <div class="owl-item ps-5 pe-4">
+                                <div class="item">
+                                    <div class="image-holder">
+                                        <img src="{% static 'img/companies/mb-broker-mmc.png' %}" alt="MB Broker MMC">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item ps-5 pe-4">
+                                <div class="item">
+                                    <div class="image-holder">
+                                        <img src="{% static 'img/companies/analitik-ekspertiza-merkezi.png' %}" alt="Analitik Ekspertiza Mərkəzi">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item ps-5 pe-4">
+                                <div class="item">
+                                    <div class="image-holder">
+                                        <img src="{% static 'img/companies/panno-textile.png' %}" alt="Panno Textile">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item ps-5 pe-4">
+                                <div class="item">
+                                    <div class="image-holder">
+                                        <img src="{% static 'img/companies/amik.png' %}" alt="Azərbaycan Menecment və İnvestisiya Korporasiyası">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item ps-5 pe-4">
+                                <div class="item">
+                                    <div class="image-holder">
+                                        <img src="{% static 'img/companies/qarabag-konsaltinq.jpg' %}" alt="Qarabağ Konsaltinq MMC">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item ps-5 pe-4">
+                                <div class="item">
+                                    <div class="image-holder">
+                                        <img src="{% static 'img/companies/atesgah-sigorta.png' %}" alt="Atəşgah Həyat Sığorta Şirkəti">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item ps-5 pe-4">
+                                <div class="item">
+                                    <div class="image-holder">
+                                        <img src="{% static 'img/companies/caucasus-consulting-group-of-companies.png' %}" alt="Caucasus COnsulting Group of Companies MMC">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item ps-5 pe-4">
+                                <div class="item">
+                                    <div class="image-holder">
+                                        <img src="{% static 'img/companies/kliniki-tibbi-merkez.png' %}" alt="Kliniki Tibbi Mərkəz">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item ps-5 pe-4">
+                                <div class="item">
+                                    <div class="image-holder">
+                                        <img src="{% static 'img/companies/investbaku-mmc.png' %}" alt="InvestBaku MMC">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item ps-5 pe-4">
+                                <div class="item">
+                                    <div class="image-holder">
+                                        <img src="{% static 'img/companies/alex-machine-istanbul.jpeg' %}" alt="Alex Machine Istanbul">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item ps-5 pe-4">
+                                <div class="item">
+                                    <div class="image-holder">
+                                        <img src="{% static 'img/companies/sinohero.jpg' %}" alt="Sino-Hero (Shenzhen) Bio-Medical Electronics Co">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="owl-nav disabled"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    {% endblock %}

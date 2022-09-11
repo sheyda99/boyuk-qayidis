@@ -1,0 +1,172 @@
+
+
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+
+
+
+    <main>
+
+        
+        <section class="banner single-page-banner">
+
+            <hr>
+            <div class="banner-bg" style="background-image: url('../static/img/banner1.jpg');">
+                <div class="carousel-caption text-start mt-5">
+                    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="{% url 'home' %}">Əsas Səhifə</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Haqqımızda</li>
+                        </ol>
+                    </nav>
+                    <h2>Haqqımızda</h2>
+                </div>
+            </div>
+        </section>
+
+        <section id="about-us" class="about-us pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-8">
+                        <h3>Vaxtınıza Qənaət Edən Təhlükəsiz, Etibarlı və Ekspres Logistika və Nəqliyyat Həlləri!</h3>
+                        <div class="row mt-5 pb-5 about-content">
+                            <div class="col-12 col-md-5">
+                                <div id="about-carousel" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#about-carousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#about-carousel" data-bs-slide-to="1" aria-label="Slide 2" class="active" aria-current="true"></button>
+                                    </div>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active" style="min-height: 305px;">
+                                            <i class="fa-solid fa-globe"></i>
+                                            <h4>Missiyamız</h4>
+                                            <p>Yüksək keyfiyyətli məhsul göndərmələrini təmin etmək, material, informasiya, maliyyə, kadr və s. axınlarının funksional menecmentinin səmərəli, inteqrativ sistemini yaratmaqdır. Eyni zamanda davamlı inkişafa yönəlmiş insanların təcrübə, bilik tələbatlarını peşəkarlıqla qarşılaya bilməkdir.</p>
+                                        </div>
+                                        <div class="carousel-item" style="min-height: 305px;">
+                                            <i class="fa-solid fa-globe"></i>
+                                            <h4>Vizyonumuz</h4>
+                                            <p>Vizyonumuz Azərbaycanda ən çox seçilib etibar edilən şirkətə çevrilməklə yanaşı,  regionda da bu sahədə faydalı tərəfdaş kimi etibar qazanaraq, fəaliyyət istiqamətlərini digər ölkələrə də yaya bilməkdir.</p>
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#about-carousel" data-bs-slide="prev" style="display: none;">
+                                        <span class="visually-hidden">Previous</span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#about-carousel" data-bs-slide="next" style="display: none;">
+                                        <span class="visually-hidden">Next</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-7 px-4">
+                                <h4>"Böyük Qayıdış" MMC şirkətinin yaradılmasının əsas məqsədi sizə ən yüksək səviyyədə təchizat xidməti göstərmək və təşkilati məsələlərdə peşəkar komandamızla yanınızda olmaqdır.</h4>
+                                <p>Bir çox xidmətlər göstərən şirkətimiz özündə sənaye və iqtisadiyyatın sahələrini cəmləşdirən biznesiniz üçün geniş sayda həll yolları təqdim edir. Təchizat və satış, kommersiya və dövlət təşkilatları üçün bütün zəruri materialların satın alınması, procurement, supply və digər əməliyyatlarınızı operativ və rahat şəkildə icra etmək şirkətimiz üçün önəmli faktordur.</p>
+                            </div>
+                        </div>
+                        <h4 class="mt-5">Üstünlüyümüz:</h4>
+                        <p>Səmərəli və şəffaf iş prinsiplərinə əsaslanaraq, müasir keyfiyyət standartlarına uyğun xidmətlərlə Azərbaycanda və beynəlxalq aləmdə etibar və sabitlik nümunəsi olan bir şirkət olmaq, müştəri bazasını bundan sonra da artırmaq əzmində olaraq, bütün bunları reallaşdırmaq üçün əməli tədbirlər işləyib hazırlamaq. İşin keyfiyyətini artıraraq, müştəri məmnunluğunu qoruyub saxlamaq. İşçi heyətinin peşəkar fəaliyyətini bundan sonra da inkişaf etdirmək əzmində olaraq, bütün bunları reallaşdırmaq üçün əməli tədbirlər işləyib hazirlamaq.</p>
+                    </div>
+                    <div class="col-4 d-none d-lg-block">
+                        <div class="image-holder">
+                            <img src="{% static  'img/about.jpg' %}" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section partners-customers-section">
+            <div class="container">
+                <h3>Tərəfdaş və Sifarişçilər</h3>
+                <div class="line"></div>
+                <div class="owl-carousel owl-theme owl-loaded owl-drag">
+                    <div class="owl-stage-outer">
+                        <div class="row owl-stage" style="align-items: center;">
+                            <div class="owl-item ps-5 pe-4">
+                                <div class="item">
+                                    <div class="image-holder">
+                                        <img src="{% static 'img/companies/mb-broker-mmc.png' %}" alt="MB Broker MMC">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item ps-5 pe-4">
+                                <div class="item">
+                                    <div class="image-holder">
+                                        <img src="{% static 'img/companies/analitik-ekspertiza-merkezi.png' %}" alt="Analitik Ekspertiza Mərkəzi">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item ps-5 pe-4">
+                                <div class="item">
+                                    <div class="image-holder">
+                                        <img src="{% static 'img/companies/panno-textile.png' %}" alt="Panno Textile">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item ps-5 pe-4">
+                                <div class="item">
+                                    <div class="image-holder">
+                                        <img src="{% static 'img/companies/amik.png' %}" alt="Azərbaycan Menecment və İnvestisiya Korporasiyası">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item ps-5 pe-4">
+                                <div class="item">
+                                    <div class="image-holder">
+                                        <img src="{% static 'img/companies/qarabag-konsaltinq.jpg' %}" alt="Qarabağ Konsaltinq MMC">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item ps-5 pe-4">
+                                <div class="item">
+                                    <div class="image-holder">
+                                        <img src="{% static 'img/companies/atesgah-sigorta.png' %}" alt="Atəşgah Həyat Sığorta Şirkəti">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item ps-5 pe-4">
+                                <div class="item">
+                                    <div class="image-holder">
+                                        <img src="{% static 'img/companies/caucasus-consulting-group-of-companies.png' %}" alt="Caucasus COnsulting Group of Companies MMC">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item ps-5 pe-4">
+                                <div class="item">
+                                    <div class="image-holder">
+                                        <img src="{% static 'img/companies/kliniki-tibbi-merkez.png' %}" alt="Kliniki Tibbi Mərkəz">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item ps-5 pe-4">
+                                <div class="item">
+                                    <div class="image-holder">
+                                        <img src="{% static 'img/companies/investbaku-mmc.png' %}" alt="InvestBaku MMC">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item ps-5 pe-4">
+                                <div class="item">
+                                    <div class="image-holder">
+                                        <img src="{% static 'img/companies/alex-machine-istanbul.jpeg' %}" alt="Alex Machine Istanbul">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="owl-item ps-5 pe-4">
+                                <div class="item">
+                                    <div class="image-holder">
+                                        <img src="{% static 'img/companies/sinohero.jpg' %}" alt="Sino-Hero (Shenzhen) Bio-Medical Electronics Co">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="owl-nav disabled"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    {% endblock %}
