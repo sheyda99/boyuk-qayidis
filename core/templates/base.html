@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Əsas Səhifə | Böyük Qayıdış</title>
+    <title>{% block title %}{% endblock %} | Böyük Qayıdış</title>
     <link rel="icon" type="image/x-icon" href="{% static 'img/logo/logo.svg' %}">
     <script src="https://kit.fontawesome.com/f9a01ea1da.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,23 +18,12 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-
     {% include "./includes/header.html" %}
 
-
-
     {% block content %}
-
     {% endblock %}
 
-
-
-
-
     {% include "./includes/footer.html"%} 
-
-
-
 
     <a href="#" class="back-to-top"><i class="fa fa-angle-up"></i></a>
 
@@ -68,8 +57,5 @@
             }
         });
     </script>
-
-
-
 </body>
 </html>

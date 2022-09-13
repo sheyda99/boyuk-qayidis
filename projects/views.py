@@ -10,7 +10,7 @@ def projects(request):
    
     page_num = request.GET.get('page', 1)
 
-    paginator = Paginator(projects, 3) # 6 employees per page
+    paginator = Paginator(projects, 6) # 6 employees per page
 
     try:
         page_obj = paginator.page(page_num)

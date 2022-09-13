@@ -1,12 +1,9 @@
-
 {% extends "base.html" %}
-
 {% load static %}
 
+{% block title %}Əsas Səhifə{% endblock %}
+
 {% block content %}
-
-
-
     <main>
         <section class="banner">
             <div id="carousel" class="carousel slide" data-bs-ride="carousel">
@@ -245,10 +242,8 @@
                 <h3>Layihələr</h3>
                 <div class="line"></div>
                 <div class="row">
-
                     {% for i in projects %}
-
-                    <a href="project-details.html" class="col-12 col-md-4">
+                    <a href="{{i.get_absolute_url}}" class="col-12 col-md-4">
                         <div class="card">
                             <div class="card-img-top" style="background-image: url('{{ i.image.url }}');"></div>
                             <div class="card-body">
@@ -257,49 +252,11 @@
                             </div>
                         </div>
                     </a>
-
                     {% endfor %}
 
                     <!-- <a href="project-details.html" class="col-12 col-md-4">
                         <div class="card">
                             <div class="card-img-top" style="background-image: url('static/img/projects2.jpg');"></div>
-                            <div class="card-body">
-                                <h5 class="card-title">Project title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                        </div>
-                    </a> -->
-                    <a hr
-        <section class="section projects-section">
-            <div class="container">
-                <h3>Layihələr</h3>
-                <div class="line"></div>
-                <div class="row">
-                    {% for i in projects %}
-                    <a href="project-details.html" class="col-12 col-md-4">
-                        <div class="card">
-                            <div class="card-img-top" style="background-image: url('{{ i.image.url }}');"></div>
-                            <div class="card-body">
-                                <h5 class="card-title">{{i.title}}</h5>
-                                <p class="card-text">{{i.description1|truncatechars:85}}</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    {% endfor %}
-
-                    <!-- <a href="project-details.html" class="col-12 col-md-4">
-                        <div class="card">
-                            <div class="card-img-top" style="background-image: url('static/img/projects2.jpg');"></div>
-                            <div class="card-body">
-                                <h5 class="card-title">Project title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="project-details.html" class="col-12 col-md-4">
-                        <div class="card">
-                            <div class="card-img-top" style="background-image: url('static/img/projects3.jpg');"></div>
                             <div class="card-body">
                                 <h5 class="card-title">Project title</h5>
                                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -317,8 +274,6 @@
                 <div class="line"></div>
                 <div class="row">
                     {% for i in news %}
-
-
                     <div class="col-12 col-md-4">
                         <div class="card">
                             <a href="{{i.get_absolute_url}}">
@@ -332,7 +287,6 @@
                             </div>
                         </div>
                     </div>
-
                     {% endfor %}
 
                     <!-- <div class="col-12 col-md-4">
@@ -347,24 +301,10 @@
                                 <a href="news-details.html" class="read-more">Daha ətraflı</a>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-12 col-md-4">
-                        <div class="card">
-                            <a href="news-details.html">
-                                <div class="card-img-top" style="background-image: url('static/img/news3.jpg');"></div>
-                            </a>
-                            <div class="card-body">
-                                <span>30 Avqust 2022</span>
-                                <a href="news-details.html"><h5 class="card-title">News title</h5></a>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="news-details.html" class="read-more">Daha ətraflı</a>
-                            </div>
-                        </div>
                     </div> -->
                 </div>
                 <a href="{% url 'news' %}" class="btn btn-purple mt-4">Daha Çox</a>
             </div>
         </section>
     </main>
-
-    {% endblock %}
+{% endblock %}

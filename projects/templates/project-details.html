@@ -1,10 +1,9 @@
 {% extends "base.html" %}
-
 {% load static %}
 
+{% block title %}Layihələr{% endblock %}
+
 {% block content %}
-
-
     <main>
         <section class="banner single-page-banner">
             <div class="banner-bg" style="background-image: url('../../core/static/img/banner2.jpg');">
@@ -26,7 +25,7 @@
                 <div class="row">
                     <div class="col-12 col-md-8 single-blog">
                         <div class="blog-title-img">
-                            <img src="{% static 'img/news1.jpg' %}" alt="project 1">
+                            <img src="{{projects.image.url}}" alt="{{projects.title}}">
                         </div>
                         <h3 class="mt-5 pb-3">{{projects.title}}</h3>
                         <span>{{projects.created_at}}</span>
@@ -108,5 +107,4 @@
             </div>
         </section>
     </main>
-
-    {% endblock %}
+{% endblock %}
