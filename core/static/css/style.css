@@ -519,6 +519,7 @@ header .primary-menu ul li a.active::after {
 }
 .section .card .card-body {
     padding: 30px;
+    min-height: 200px;
 }
 .section .card .card-body .card-title {
     font-size: 2.4rem;
@@ -787,6 +788,12 @@ footer .copyright a {
 #projects-page .projects-section .col-12,
 #news-page .news-section .col-12 {
     margin-bottom: 50px;
+}
+
+#projects-page .section .card .card-body {
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
 }
 
 #projects-page .date-info {
