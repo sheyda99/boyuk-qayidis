@@ -6,8 +6,8 @@
 {% block content %}
     <main id="projects-page">
         <section class="banner single-page-banner">
-            <div class="banner-bg" style="background-image: url('../static/img/banner2.jpg');">
-                <div class="carousel-caption text-start mt-5">
+            <div class="banner-bg">
+                <div class="caption text-start">
                     <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="{% url 'home' %}">Əsas Səhifə</a></li>
@@ -64,9 +64,9 @@
                         {% if page_obj.has_previous %}
                         <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}"><i class="fa-solid fa-angle-left"></i></a></li>
                         {% endif %}
-                        <li class="page-item"><a class="page-link" href="#">{{ page_obj.number }}</a></li>
-                        <li class="page-item"><a class="page-link" href="#">of</a></li>
-                        <li class="page-item"><a class="page-link" href="#">{{ page_obj.paginator.num_pages }}</a></li>
+                        <li class="page-item"><a class="deactive page-link active">{{ page_obj.number }}</a></li>
+                        <li class="page-item"><a class="deactive page-link">/</a></li>
+                        <li class="page-item"><a class="deactive page-link">{{ page_obj.paginator.num_pages }}</a></li>
                         {% if page_obj.has_next %}
                         <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}"><i class="fa-solid fa-angle-right"></i></a></li>
                         {% endif %}
@@ -75,4 +75,11 @@
             </div>
         </section>
     </main>
+    <script>
+        document.getElementsByClassName("deactive").forEach(element => {
+            element.addEventListener("click", function(e) {
+                e.preventDefault();
+            });
+        });
+    </script>
 {% endblock %}
