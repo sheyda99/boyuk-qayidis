@@ -26,7 +26,7 @@
     ],
     "functions": {
       "api/**/*.py": {
-        "excludeFiles": "**/*.html"
+        "excludeFiles": "public/**"
       }
     }
   }
