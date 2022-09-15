@@ -1,47 +1,44 @@
 {% load static %}
 
+    <a id="mobile-menu-trigger" href="#0">
+        <span class="mobile-menu-icon"></span>
+    </a>
+    <div class="overlay"></div>
+    <nav id="mobile-nav" class="mobile-nav">
+        <ul class="mobile-menu">
+            <li><a href="/">Əsas səhifə</a></li>
+            <li><a href="{% url 'about' %}">Haqqımızda</a></li>
+            <li><a href="{% url 'services' %}">Xidmətlər</a></li>
+            <li><a href="{% url 'projects' %}">Layihələr</a></li>
+            <li><a href="{% url 'news' %}">Xəbərlər</a></li>
+            <li><a href="{% url 'partners' %}">Tərəfdaş və Sifarişçilər</a></li>
+            <li><a href="{% url 'contact' %}">Əlaqə</a></li>
+        </ul>
+    </nav>
 
-
-
-<!-- <a id="mobile-menu-trigger" href="#0">
-    <span class="mobile-menu-icon"></span> -->
-</a>
-<div class="overlay"></div>
-<nav id="mobile-nav" class="mobile-nav">
-    <ul class="mobile-menu">
-        <li><a href="/">Əsas səhifə</a></li>
-        <li><a href="{% url 'about' %}">Haqqımızda</a></li>
-        <li><a href="{% url 'services' %}">Xidmətlər</a></li>
-        <li><a href="{% url 'partners' %}">Tərəfdaş və Sifarişçilər</a></li>
-        <li><a href="{% url 'projects' %}">Layihələr</a></li>
-        <li><a href="{% url 'news' %}">Xəbərlər</a></li>
-        <li><a href="{% url 'contact' %}">Əlaqə</a></li>
-    </ul>
-</nav>
-
-<header id="header">
-    <div class="container">
-        <div class="row">
-            <div class="col-2">
-                <div class="logo">
-                    <a href="{% url 'home' %}">
-                        <img src="{% static 'img/logo/logo.svg' %}" alt="Böyük Qayıdış logo">
-                    </a>
+    <header id="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <div class="logo">
+                        <a href="{% url 'home' %}">
+                            <img src="{% static 'img/logo/logo.svg' %}" alt="Böyük Qayıdış logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-10">
+                    <nav id="primary-menu" class="primary-menu">
+                        <ul>
+                            <li><a href="/" class="{% if navbar == 'home_page' %}   active  {% endif %}">Əsas səhifə</a></li>
+                            <li><a href="{% url 'about' %}" class="{% if navbar == 'about_page' %}   active  {% endif %}" >Haqqımızda</a></li>
+                            <li><a href="{% url 'services' %}" class="{% if navbar == 'services_page' %}   active  {% endif %}">Xidmətlər</a></li>
+                            <li><a href="{% url 'projects' %}" class="{% if navbar == 'projects_page' %}   active  {% endif %}">Layihələr</a></li>
+                            <li><a href="{% url 'news' %}" class="{% if navbar == 'news_page' %}   active  {% endif %}">Xəbərlər</a></li>
+                            <li><a href="{% url 'partners' %}" class="{% if navbar == 'partners_page' %}   active  {% endif %}">Tərəfdaş və Sifarişçilər</a></li>
+                            <li><a href="{% url 'contact' %}" class="{% if navbar == 'contact_page' %}   active  {% endif %}">Əlaqə</a></li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
-            <div class="col-10">
-                <nav id="primary-menu" class="primary-menu">
-                    <ul>
-                        <li><a href="/" class="{% if navbar == "home_page" %}   active  {% endif %}">Əsas səhifə</a></li>
-                        <li><a href="{% url 'about' %}" class="{% if navbar == "about_page" %}   active  {% endif %}" >Haqqımızda</a></li>
-                        <li><a href="{% url 'services' %}" class="{% if navbar == "services_page" %}   active  {% endif %}">Xidmətlər</a></li>
-                        <li><a href="{% url 'partners' %}" class="{% if navbar == "partners_page" %}   active  {% endif %}">Tərəfdaş və Sifarişçilər</a></li>
-                        <li><a href="{% url 'projects' %}" class="{% if navbar == "projects_page" %}   active  {% endif %}">Layihələr</a></li>
-                        <li><a href="{% url 'news' %}" class="{% if navbar == "news_page" %}   active  {% endif %}">Xəbərlər</a></li>
-                        <li><a href="{% url 'contact' %}" class="{% if navbar == "contact_page" %}   active  {% endif %}">Əlaqə</a></li>
-                    </ul>
-                </nav>
-            </div>
         </div>
-    </div>
-</header>
+    </header>

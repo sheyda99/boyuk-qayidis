@@ -17,11 +17,11 @@ class Projects(models.Model):
     image3 = models.ImageField('Şəkil3', upload_to = 'media/projects', null=True, blank=True)
     image4 = models.ImageField('Şəkil4', upload_to = 'media/projects', null=True, blank=True)
     image5 = models.ImageField('Şəkil5', upload_to = 'media/projects', null=True, blank=True)
-    description1 = models.CharField('Məzmun1', max_length = 2000, null=True, blank=True)
-    description2 = models.CharField('Məzmun2', max_length = 2000, null=True, blank=True)
-    description3 = models.CharField('Məzmun3', max_length = 2000, null=True, blank=True)
-    description4 = models.CharField('Məzmun4', max_length = 2000, null=True, blank=True)
-    description5 = models.CharField('Məzmun5', max_length = 2000, null=True, blank=True)
+    description1 = models.TextField('Qısa məzmun', max_length = 2000)
+    description2 = models.TextField('Məzmun1', max_length = 2000, null=True, blank=True)
+    description3 = models.TextField('Məzmun2', max_length = 2000, null=True, blank=True)
+    description4 = models.TextField('Məzmun3', max_length = 2000, null=True, blank=True)
+    description5 = models.TextField('Məzmun4', max_length = 2000, null=True, blank=True)
     slug = models.SlugField('Slug', max_length = 110, unique = True, editable = False)
 
     # moderations

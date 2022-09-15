@@ -1,17 +1,13 @@
 {% extends "base.html" %}
-
 {% load static %}
 
-{% block content %}
-    
-{% block title %}
-    {{news.title}} | Böyük Qayıdış
-{% endblock %}
+{% block title %}Xəbərlər{% endblock %}
 
+{% block content %}
     <main>
         <section class="banner single-page-banner">
-            <div class="banner-bg" style="background-image: url('../../core/static/img/banner2.jpg');">
-                <div class="carousel-caption text-start mt-5">
+            <div class="banner-bg">
+                <div class="container caption text-start">
                     <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="{% url 'home' %}">Əsas Səhifə</a></li>
@@ -29,7 +25,7 @@
                 <div class="row">
                     <div class="col-12 col-md-8 single-blog">
                         <div class="blog-title-img">
-                            <img src="{{ news.image.url }}" alt="News 1">
+                            <img src="{{ news.image.url }}" alt="{{news.title}}">
                         </div>
                         <h3 class="mt-5 pb-3">{{news.title}}</h3>
                         <span>{{news.created_at}}</span>
@@ -89,10 +85,6 @@
                         </div>
                     </div>
 
-
-
-
-
                     <div class="col-12 col-md-4">
                         <div class="sidebar text-start">
                             <h4>Digər xəbərlər</h4>
@@ -121,5 +113,4 @@
             </div>
         </section>
     </main>
-
-    {% endblock %}
+{% endblock %}

@@ -1,24 +1,13 @@
-
-
 {% extends "base.html" %}
-
 {% load static %}
 
+{% block title %}Haqqımızda{% endblock %}
+
 {% block content %}
-
-
-{% block title %}
-    Haqqımızda | Böyük Qayıdış
-{% endblock %}
-
     <main>
-
-        
         <section class="banner single-page-banner">
-
-            <hr>
-            <div class="banner-bg" style="background-image: url('../static/img/banner1.jpg');">
-                <div class="carousel-caption text-start mt-5">
+            <div class="banner-bg">
+                <div class="container caption text-start">
                     <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="{% url 'home' %}">Əsas Səhifə</a></li>
@@ -30,7 +19,7 @@
             </div>
         </section>
 
-        <section id="about-us" class="about-us pb-5">
+        <section id="about-us" class="about-us mt-5 py-5">
             <div class="container">
                 <div class="row">
                     <div class="col-12 col-lg-8">
@@ -68,7 +57,7 @@
                             </div>
                         </div>
                         <h4 class="mt-5">Üstünlüyümüz:</h4>
-                        <p>Səmərəli və şəffaf iş prinsiplərinə əsaslanaraq, müasir keyfiyyət standartlarına uyğun xidmətlərlə Azərbaycanda və beynəlxalq aləmdə etibar və sabitlik nümunəsi olan bir şirkət olmaq, müştəri bazasını bundan sonra da artırmaq əzmində olaraq, bütün bunları reallaşdırmaq üçün əməli tədbirlər işləyib hazırlamaq. İşin keyfiyyətini artıraraq, müştəri məmnunluğunu qoruyub saxlamaq. İşçi heyətinin peşəkar fəaliyyətini bundan sonra da inkişaf etdirmək əzmində olaraq, bütün bunları reallaşdırmaq üçün əməli tədbirlər işləyib hazirlamaq.</p>
+                        <p>Səmərəli və şəffaf iş prinsiplərinə əsaslanaraq, müasir keyfiyyət standartlarına uyğun xidmətlərlə Azərbaycanda və beynəlxalq aləmdə etibar və sabitlik nümunəsi olan bir şirkət olmaq, müştəri bazasını bundan sonra da artırmaq əzmində olaraq, bütün bunları reallaşdırmaq üçün əməli tədbirlər işləyib hazırlamaq. İşin keyfiyyətini artıraraq, müştəri məmnunluğunu qoruyub saxlamaq. İşçi heyətinin peşəkar fəaliyyətini bundan sonra da inkişaf etdirmək əzmində olaraq, bütün bunları reallaşdırmaq üçün əməli tədbirlər işləyib hazırlamaq.</p>
                     </div>
                     <div class="col-4 d-none d-lg-block">
                         <div class="image-holder">
@@ -170,5 +159,4 @@
             </div>
         </section>
     </main>
-
-    {% endblock %}
+{% endblock %}

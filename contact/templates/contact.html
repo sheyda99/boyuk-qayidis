@@ -1,17 +1,13 @@
 {% extends "base.html" %}
-
 {% load static %}
 
+{% block title %}Əlaqə{% endblock %}
+
 {% block content %}
-
-{% block title %}
-    Əlaqə | Böyük Qayıdış
-{% endblock %}
-
     <main id="contact-page">
         <section class="banner single-page-banner">
-            <div class="banner-bg" style="background-image: url('../static/img/banner1.jpg');">
-                <div class="carousel-caption text-start mt-5">
+            <div class="banner-bg">
+                <div class="container caption text-start">
                     <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="{% url 'home' %}">Əsas Səhifə</a></li>
@@ -23,13 +19,13 @@
             </div>
         </section>
 
-        <main class="container my-5 py-5">
+        <section class="container my-5 py-5">
             <div class="form-info pb-5">
                 <div class="row" style="align-items: flex-start;">
                     <div class="col-12 col-md-6 col-xl-3 form-contact-news form-location text-center">
                         <i class="fa-solid fa-location-dot"></i>
                         <p>
-                            <strong>Məkan:</strong><br>
+                            <strong>Ünvan:</strong><br>
                             <span>Bakı ş. Nərimanov rayonu, Kral Hüseyn küç 64B</span>
                         </p>
                     </div>
@@ -51,7 +47,7 @@
                         <i class="fa-solid fa-globe"></i>
                         <p>
                             <strong>Website:</strong><br>
-                            <span>boyukqayidish.az</span>
+                            <span>boyukqayidish.com</span>
                         </p>
                     </div>
                 </div>
@@ -63,7 +59,6 @@
                     <h2>Aşağıdakı formu dolduraraq bizə onlayn müraciət edə bilərsiniz.</h2>
                 </div>
             </div>
-            
 
             <div class="contact-form-image pt-3">
                 <div class="contact-form">
@@ -90,11 +85,10 @@
                             <!-- <textarea name="" id="" cols="30" rows="10" placeholder="Mesajınız"></textarea> -->
                         </div>
                         <button type="submit" class="btn btn-purple">Göndər</button>
-                        
                     </form>
                 </div>
             </div>
-        </main>
+        </section>
 
         <section class="mapouter">
             <div class="gmap_canvas">
@@ -102,5 +96,4 @@
             </div>
         </section>
     </main>
-
-    {% endblock %}
+{% endblock %}

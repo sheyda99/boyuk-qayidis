@@ -1,17 +1,13 @@
 {% extends "base.html" %}
-
 {% load static %}
 
-{% block content %}
+{% block title %}Layihələr{% endblock %}
 
-{% block title %}
-    Layihələr | Böyük Qayıdış
-{% endblock %}
-    
+{% block content %}
     <main id="projects-page">
         <section class="banner single-page-banner">
-            <div class="banner-bg" style="background-image: url('../static/img/banner2.jpg');">
-                <div class="carousel-caption text-start mt-5">
+            <div class="banner-bg">
+                <div class="container caption text-start">
                     <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item"><a href="{% url 'home' %}">Əsas Səhifə</a></li>
@@ -27,12 +23,11 @@
             <div class="container">
                 <div class="row">
                     {% for i in projects %}
-
                     <div class="col-12 col-md-4">
                         <div class="date-info">
                             <div class="date">
-                                <span class="day">2</span>
-                                <span class="month">{{i.created_at|date:"d M Y"}}</span>
+                                <span class="day">{{i.created_at|date:"d"}}</span>
+                                <span class="month">{{i.created_at|date:"M"}}</span>
                             </div>
                         </div>
                         <div class="card">
@@ -40,11 +35,10 @@
                             <div class="card-body">
                                 <h5 class="card-title">{{i.title}}</h5>
                                 <p class="card-text">{{i.description1|truncatechars:85}}</p>
-                                <a href="{{i.get_absolute_url}}" class="btn btn-purple">Daha Ətraflı</a>
+                                <a href="{{i.get_absolute_url}}" class="mt-auto btn btn-purple" style="width: fit-content;">Daha Ətraflı</a>
                             </div>
                         </div>
                     </div>
-
                     {% endfor %}
                    
                     <!-- <div class="col-12 col-md-4">
@@ -62,94 +56,30 @@
                                 <a href="project-details.html" class="btn btn-purple">Daha Ətraflı</a>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="col-12 col-md-4">
-                        <div class="date-info">
-                            <div class="date">
-                                <span class="day">2</span>
-                                <span class="month">Sent 22</span>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-img-top" style="background-image: url('../static/img/projects3.jpg');"></div>
-                            <div class="card-body">
-                                <h5 class="card-title">Project title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="project-details.html" class="btn btn-purple">Daha Ətraflı</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-4">
-                        <div class="date-info">
-                            <div class="date">
-                                <span class="day">2</span>
-                                <span class="month">Sent 22</span>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-img-top" style="background-image: url('../static/img/projects1.jpg');"></div>
-                            <div class="card-body">
-                                <h5 class="card-title">Project title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="project-details.html" class="btn btn-purple">Daha Ətraflı</a>
-                            </div>
-                        </div>
-                    </div>
-                   
-                    <div class="col-12 col-md-4">
-                        <div class="date-info">
-                            <div class="date">
-                                <span class="day">2</span>
-                                <span class="month">Sent 22</span>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-img-top" style="background-image: url('../static/img/projects2.jpg');"></div>
-                            <div class="card-body">
-                                <h5 class="card-title">Project title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="project-details.html" class="btn btn-purple">Daha Ətraflı</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-4">
-                        <div class="date-info">
-                            <div class="date">
-                                <span class="day">2</span>
-                                <span class="month">Sent 22</span>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-img-top" style="background-image: url('../static/img/projects3.jpg');"></div>
-                            <div class="card-body">
-                                <h5 class="card-title">Project title</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="project-details.html" class="btn btn-purple">Daha Ətraflı</a>
-                            </div>
-                        </div>
                     </div> -->
-
-
                 </div>
+
                 <nav class="page-pagination">
                     <ul class="pagination">
                         {% if page_obj.has_previous %}
-                      <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}"><i class="fa-solid fa-angle-left"></i></a></li>
+                        <li class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}"><i class="fa-solid fa-angle-left"></i></a></li>
                         {% endif %}
-                      <li class="page-item"><a class="page-link" href="#">{{ page_obj.number }}</a></li>
-                      <li class="page-item"><a class="page-link" href="#">of</a></li>
-                      <li class="page-item"><a class="page-link" href="#">{{ page_obj.paginator.num_pages }}</a></li>
+                        <li class="page-item"><a class="deactive page-link active">{{ page_obj.number }}</a></li>
+                        <li class="page-item"><a class="deactive page-link">/</a></li>
+                        <li class="page-item"><a class="deactive page-link">{{ page_obj.paginator.num_pages }}</a></li>
                         {% if page_obj.has_next %}
-                      <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}"><i class="fa-solid fa-angle-right"></i></a></li>
+                        <li class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}"><i class="fa-solid fa-angle-right"></i></a></li>
                         {% endif %}
                     </ul>
                 </nav>
             </div>
         </section>
     </main>
-
-    <footer>
-    {% endblock %}
+    <script>
+        document.getElementsByClassName("deactive").forEach(element => {
+            element.addEventListener("click", function(e) {
+                e.preventDefault();
+            });
+        });
+    </script>
+{% endblock %}

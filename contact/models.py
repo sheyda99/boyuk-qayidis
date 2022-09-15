@@ -10,7 +10,7 @@ class Contact(models.Model):
     number = models.CharField('Telefon nömrəsi', max_length = 20)
     email = models.EmailField('Email', max_length = 50)
     subject = models.CharField('Mövzu', max_length = 150)
-    messege = models.CharField('Mesaj', max_length = 2000)
+    messege = models.TextField('Mesaj', max_length = 2000)
 
     # moderations
     created_at = models.DateTimeField(auto_now_add=True)
