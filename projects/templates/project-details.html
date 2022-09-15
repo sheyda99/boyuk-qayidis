@@ -87,20 +87,22 @@
                         <div class="sidebar text-start">
                             <h4>Digər layihələr</h4>
                             <div class="line"></div>
+                            {% for i in related_projects %}
                             <div class="box">
-                                <a href="project-details.html">
-                                    <div class="box-img" style="background-image: url('../static/img/projects2.jpg');"></div>
+                                <a href="{{i.get_absolute_url}}">
+                                    <div class="box-img" style="background-image: url('{{ i.image.url }}');"></div>
                                 </a>
-                                <span>30 Avqust 2022</span>
-                                <a href="project-details.html"><h5>Lorem ipsum dolor sit amet consectetur</h5></a>
+                                <span>{{i.created_at}}</span>
+                                <a href="{{i.get_absolute_url}}"><h5>{{ i.title }}</h5></a>
                             </div>
-                            <div class="box">
+                            {% endfor %}
+                            <!-- <div class="box">
                                 <a href="project-details.html">
                                     <div class="box-img" style="background-image: url('../static/img/projects3.jpg');"></div>
                                 </a>
                                 <span>30 Avqust 2022</span>
                                 <a href="project-details.html"><h5>Lorem ipsum dolor sit amet consectetur</h5></a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>

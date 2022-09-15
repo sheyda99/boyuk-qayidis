@@ -1,3 +1,4 @@
+from concurrent.futures import process
 from django.shortcuts import render
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.shortcuts import get_object_or_404
@@ -32,10 +33,13 @@ def projects(request):
 
 def projects_details(request, slug):
     projects = get_object_or_404(Projects, slug = slug)
+    related_projects = Projects.objects.exclude(slug=projects.slug).order_by('-id')[0:2]
+
 
     context = {
         'navbar': 'projects_page',
-        'projects' : projects
+        'projects' : projects,
+        'related_projects' : related_projects
     }
 
     return render(request, 'project-details.html', context)

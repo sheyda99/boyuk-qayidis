@@ -90,15 +90,17 @@
                             <h4>Digər xəbərlər</h4>
                             <div class="line"></div>
 
+                            {% for i in related_news %}
 
                             <div class="box">
-                                <a href="news-details.html">
-                                    <div class="box-img" style="background-image: url('../static/img/news2.jpg');"></div>
+                                <a href="{{i.get_absolute_url}}">
+                                    <div class="box-img" style="background-image: url('{{i.image.url}}');"></div>
                                 </a>
-                                <span>30 Avqust 2022</span>
-                                <a href="news-details.html"><h5>Lorem ipsum dolor sit amet consectetur</h5></a>
+                                <span>{{i.created_at}}</span>
+                                <a href="{{i.get_absolute_url}}"><h5>{{i.title}}</h5></a>
                             </div>
 
+                            {% endfor %}
                             
                             <!-- <div class="box">
                                 <a href="news-details.html">
