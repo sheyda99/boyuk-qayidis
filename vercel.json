@@ -23,5 +23,10 @@
         "src": "/(.*)",
         "dest": "boyuk_qayidis/wsgi.py"
       }
-    ]
+    ],
+    "functions": {
+      "api/**/*.py": {
+        "excludeFiles": "**/*.html"
+      }
+    }
   }
