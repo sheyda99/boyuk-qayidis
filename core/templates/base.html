@@ -6,7 +6,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Əsas Səhifə | Böyük Qayıdış</title>
+    <title>
+        {% block title %}
+            
+        {% endblock %}
+    </title>
     <link rel="icon" type="image/x-icon" href="{% static 'img/logo/logo.svg' %}">
     <script src="https://kit.fontawesome.com/f9a01ea1da.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">

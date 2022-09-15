@@ -4,6 +4,10 @@
 
 {% block content %}
     
+{% block title %}
+    {{news.title}} | Böyük Qayıdış
+{% endblock %}
+
     <main>
         <section class="banner single-page-banner">
             <div class="banner-bg" style="background-image: url('../../core/static/img/banner2.jpg');">
@@ -93,6 +97,8 @@
                         <div class="sidebar text-start">
                             <h4>Digər xəbərlər</h4>
                             <div class="line"></div>
+
+
                             <div class="box">
                                 <a href="news-details.html">
                                     <div class="box-img" style="background-image: url('../static/img/news2.jpg');"></div>
@@ -100,13 +106,15 @@
                                 <span>30 Avqust 2022</span>
                                 <a href="news-details.html"><h5>Lorem ipsum dolor sit amet consectetur</h5></a>
                             </div>
-                            <div class="box">
+
+                            
+                            <!-- <div class="box">
                                 <a href="news-details.html">
                                     <div class="box-img" style="background-image: url('../static/img/news3.jpg');"></div>
                                 </a>
                                 <span>30 Avqust 2022</span>
                                 <a href="news-details.html"><h5>Lorem ipsum dolor sit amet consectetur</h5></a>
-                            </div>
+                            </div> -->
                         </div>
                     </div>                    
                 </div>

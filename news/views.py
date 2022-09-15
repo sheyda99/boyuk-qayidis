@@ -32,7 +32,8 @@ def news(request):
 
 def news_details(request, slug):
     news = get_object_or_404(News, slug = slug)
-
+    related_news = News.objects.exclude(slug=request.get_object().slug)
+    print(related_news)
     context = {
         'navbar': 'news_page',
         'news' : news
