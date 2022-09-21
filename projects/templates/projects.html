@@ -27,13 +27,15 @@
                         <div class="date-info">
                             <div class="date">
                                 <span class="day">{{i.created_at|date:"d"}}</span>
-                                <span class="month">{{i.created_at|date:"M"}}</span>
+                                <span class="month">{{i.created_at|date:"F"}}</span>
                             </div>
                         </div>
                         <div class="card">
-                            <div class="card-img-top" style="background-image: url('{{i.image.url}}');"></div>
+                            <a href="{{i.get_absolute_url}}">
+                                <div class="card-img-top" style="background-image: url('{{i.image.url}}');"></div>
+                            </a>
                             <div class="card-body">
-                                <h5 class="card-title">{{i.title}}</h5>
+                                <a href="{{i.get_absolute_url}}"><h5 class="card-title">{{i.title}}</h5></a>
                                 <p class="card-text">{{i.description1|truncatechars:85}}</p>
                                 <a href="{{i.get_absolute_url}}" class="mt-auto btn btn-purple" style="width: fit-content;">Daha Ətraflı</a>
                             </div>
