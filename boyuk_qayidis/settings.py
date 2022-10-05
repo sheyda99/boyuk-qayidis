@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-xzt0)1fdff1j8-mc2z^=p(or1^wdzl_5#y4i=gpbv8mqd)1abo
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False if os.environ.get('DEBUG') else True
-# PROD = not DEBUG
+PROD = not DEBUG
 
 
 ALLOWED_HOSTS = ['*']
@@ -161,10 +161,10 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 if PROD:
-    STATIC_ROOT = os.path.join(BASE_DIR, "/static/")
+    STATIC_ROOT = os.path.join(BASE_DIR, "static")
 else:
     STATICFILES_DIRS = [
-        os.path.join(BASE_DIR, "/static/")
+        os.path.join(BASE_DIR, "static")
     ]
 
 
