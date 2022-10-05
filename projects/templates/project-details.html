@@ -31,54 +31,44 @@
                         <span>{{projects.created_at}}</span>
                         <div class="line mt-4"></div>
                         <div class="single-blog-content">
-                            <!-- -------------------------------- -->
-
                             {% if projects.description1 %}
                             <p>{{projects.description1}}</p>
                             {% endif %}
-
-                            {% if projects.image1 %}
-                            <img src="{{ projects.image1.url }}" alt="Img 1">
-                            {% endif %}
-
-                            <!-- -------------------------------- -->
 
                             {% if projects.description2 %}
                             <p>{{projects.description2}}</p>
                             {% endif %}
 
-                            {% if projects.image2 %}
-                            <img src="{{ projects.image2.url }}" alt="Img 1">
-                            {% endif %}
-
-                            <!-- -------------------------------- -->
-
                             {% if projects.description3 %}
                             <p>{{projects.description3}}</p>
                             {% endif %}
-
-                            {% if projects.image3 %}
-                            <img src="{{ projects.image3.url }}" alt="Img 1">
-                            {% endif %}
-
-                            <!-- -------------------------------- -->
 
                             {% if projects.description4 %}
                             <p>{{projects.description4}}</p>
                             {% endif %}
 
-                            {% if projects.image4 %}
-                            <img src="{{ projects.image4.url }}" alt="Img 1">
-                            {% endif %}
-
-                            <!-- -------------------------------- -->
-
                             {% if projects.description5 %}
                             <p>{{projects.description5}}</p>
                             {% endif %}
 
+                            {% if projects.image1 %}
+                            <img src="{{ projects.image1.url }}" alt="Project image 1">
+                            {% endif %}
+
+                            {% if projects.image2 %}
+                            <img src="{{ projects.image2.url }}" alt="Project image 2">
+                            {% endif %}
+
+                            {% if projects.image3 %}
+                            <img src="{{ projects.image3.url }}" alt="Project image 3">
+                            {% endif %}
+                            
+                            {% if projects.image4 %}
+                            <img src="{{ projects.image4.url }}" alt="Project image 4">
+                            {% endif %}
+
                             {% if projects.image5 %}
-                            <img src="{{ projects.image5.url }}" alt="Img 1">
+                            <img src="{{ projects.image5.url }}" alt="Project image 5">
                             {% endif %}
                         </div>
                     </div>

@@ -31,57 +31,46 @@
                         <span>{{news.created_at}}</span>
                         <div class="line mt-4"></div>
                         <div class="single-blog-content">
-
-                            <!-- -------------------------------- -->
-
                             {% if news.description1 %}
                             <p>{{news.description1}}</p>
                             {% endif %}
-
-                            {% if news.image1 %}
-                            <img src="{{ news.image1.url }}" alt="Img 1">
-                            {% endif %}
-
-                            <!-- -------------------------------- -->
 
                             {% if news.description2 %}
                             <p>{{news.description2}}</p>
                             {% endif %}
 
-                            {% if news.image2 %}
-                            <img src="{{ news.image2.url }}" alt="Img 1">
-                            {% endif %}
-
-                            <!-- -------------------------------- -->
-
                             {% if news.description3 %}
                             <p>{{news.description3}}</p>
                             {% endif %}
-
-                            {% if news.image3 %}
-                            <img src="{{ news.image3.url }}" alt="Img 1">
-                            {% endif %}
-
-                            <!-- -------------------------------- -->
 
                             {% if news.description4 %}
                             <p>{{news.description4}}</p>
                             {% endif %}
 
-                            {% if news.image4 %}
-                            <img src="{{ news.image4.url }}" alt="Img 1">
-                            {% endif %}
-
-                            <!-- -------------------------------- -->
-
                             {% if news.description5 %}
                             <p>{{news.description5}}</p>
                             {% endif %}
 
-                            {% if news.image5 %}
-                            <img src="{{ news.image5.url }}" alt="Img 1">
+                            {% if news.image1 %}
+                            <img src="{{ news.image1.url }}" alt="News image 1">
                             {% endif %}
-                           
+
+                            {% if news.image2 %}
+                            <!-- -------------------------------- -->
+                            <img src="{{ news.image2.url }}" alt="News image 2">
+                            {% endif %}
+
+                            {% if news.image3 %}
+                            <img src="{{ news.image3.url }}" alt="News image 3">
+                            {% endif %}
+
+                            {% if news.image4 %}
+                            <img src="{{ news.image4.url }}" alt="News image 4">
+                            {% endif %}
+
+                            {% if news.image5 %}
+                            <img src="{{ news.image5.url }}" alt="News image 5">
+                            {% endif %}
                         </div>
                     </div>
 
