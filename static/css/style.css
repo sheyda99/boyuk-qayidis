@@ -686,6 +686,7 @@ footer .copyright a {
 .banner.single-page-banner .banner-bg {
     height: 240px;
     background-color: var(--purple);
+    /* '' */
     display: flex;
     justify-content: center;
     align-items: center;
