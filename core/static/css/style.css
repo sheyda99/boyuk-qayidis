@@ -685,7 +685,7 @@ footer .copyright a {
 /************************ OTHER PAGES ************************/
 .banner.single-page-banner .banner-bg {
     height: 240px;
-    background-color: var(--purple);
+    background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
