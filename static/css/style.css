@@ -703,7 +703,7 @@ footer .copyright a {
 }
 @media (max-width: 768px) {
     .banner.single-page-banner .caption h2 {
-        font-size: 5rem;
+        font-size: 4rem;
     }
 }
 @media (max-width: 576px) {
