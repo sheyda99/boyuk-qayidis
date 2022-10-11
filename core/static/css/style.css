@@ -415,6 +415,7 @@ header .primary-menu ul li a.active::after {
 .about-us .directory .img-holder {
     margin-right: 50px;
     position: relative;
+    max-width: 350px;
 }
 .about-us .directory .img-holder::after {
     content: "";
@@ -433,6 +434,23 @@ header .primary-menu ul li a.active::after {
     .about-us h3,
     .services h3 {
         font-size: 3rem;
+    }
+    .about-us .directory .img-holder {
+        margin: 0 0 20px;
+    }
+    .about-us .directory .img-holder::after {
+        width: 200px;
+        height: 300px;
+        right: -20px;
+    }
+    .about-us .directory .img-holder img {
+        width: 100%;
+    }
+}
+@media (max-width: 567px) {
+    .about-us .directory .img-holder::after {
+        width: 100px;
+        height: 150px;
     }
 }
 
