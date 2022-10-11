@@ -341,7 +341,7 @@ header .primary-menu ul li a.active::after {
 }
 @media (max-width: 768px) {
     .banner .carousel-inner h2 {
-        font-size: 2.6rem;
+        font-size: 2.8rem;
     }
 }
 @media (max-width: 567px) {
