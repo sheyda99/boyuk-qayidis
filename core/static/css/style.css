@@ -234,7 +234,9 @@ header .logo a {
 header .logo img {
     display: inline-block;
     height: 100%;
-    padding: 15px 0;
+    width: 230px;
+    padding: 10px 0;
+    margin-left: -20px;
 }
 header .col-10 {
     display: flex;
