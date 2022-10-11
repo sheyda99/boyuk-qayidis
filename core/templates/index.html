@@ -5,7 +5,7 @@
 
 {% block content %}
     <main>
-        <section class="banner">
+        <section class="container banner">
             <div id="carousel" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                     <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class=""></button>
@@ -14,14 +14,16 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active" style="background-image: url('static/img/banner1.jpg');">
-                        <div class="carousel-caption d-none d-md-block text-start" style="margin-bottom: 50px !important;">
+                        <div class="carousel-caption text-start" style="margin-bottom: 50px !important;">
                             <h2>Haqqımızda</h2>
-                            <p><strong>"Böyük Qayıdış" MMC</strong> şirkətinin yaradılmasının əsas məqsədi sizə ən yüksək səviyyədə təchizat xidməti göstərmək və təşkilati məsələlərdə peşəkar komandamızla yanınızda olmaqdır.</p>
+                            <br class="d-block d-md-none">
+                            <br class="d-block d-md-none">
+                            <p class="d-none d-md-block"><strong>"Böyük Qayıdış" MMC</strong> şirkətinin yaradılmasının əsas məqsədi sizə ən yüksək səviyyədə təchizat xidməti göstərmək və təşkilati məsələlərdə peşəkar komandamızla yanınızda olmaqdır.</p>
                             <a href="{% url 'about' %}" class="btn btn-white mt-3">Daha Ətraflı</a>
                         </div>
                     </div>
                     <div class="carousel-item" style="background-image: url('static/img/banner2.jpg');">
-                        <div class="carousel-caption d-none d-md-block text-start" style="margin-bottom: 50px !important;">
+                        <div class="carousel-caption text-start" style="margin-bottom: 50px !important;">
                             <h2>Layihələrimiz</h2>
                             <br><br>
                             <a href="{% url 'projects' %}" class="btn btn-white mt-3 me-3">Daha Çox</a>
@@ -29,7 +31,7 @@
                         </div>
                     </div>
                     <div class="carousel-item" style="background-image: url('static/img/banner3.jpg');">
-                        <div class="carousel-caption d-none d-md-block text-start" style="margin-bottom: 50px !important;">
+                        <div class="carousel-caption text-start" style="margin-bottom: 50px !important;">
                             <h2>Xidmətlərimiz</h2>
                             <br><br>
                             <a href="{% url 'services' %}" class="btn btn-white mt-3 me-3">Daha Çox</a>

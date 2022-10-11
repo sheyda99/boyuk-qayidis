@@ -303,7 +303,7 @@ header .primary-menu ul li a.active::after {
 
 /************************ BANNER CAROUSEL ************************/
 .banner .carousel-inner .carousel-item {
-    height: 100vh;
+    height: 70vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -338,6 +338,12 @@ header .primary-menu ul li a.active::after {
 .banner .carousel-control-prev i,
 .banner .carousel-control-next i {
     font-size: 50px;
+}
+@media (max-width: 768px) {
+    .banner .carousel-inner h2 {
+        font-size: 3.2rem;
+        font-weight: 700;
+    }
 }
 @media (max-width: 567px) {
     .banner .carousel-inner .carousel-item {
