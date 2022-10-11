@@ -368,6 +368,7 @@ header .primary-menu ul li a.active::after {
     font-size: 1.4rem;
     line-height: 2.4rem;
     color: #9b9b9b;
+    text-align: justify;
 }
 .about-us .carousel-item {
     cursor:default;
@@ -405,6 +406,26 @@ header .primary-menu ul li a.active::after {
 .about-us .image-holder img {
     display: inline-block;
     width: 100%;
+}
+.about-us .directory {
+    margin: 150px 0 30px;
+}
+.about-us .directory .img-holder {
+    margin-right: 50px;
+    position: relative;
+}
+.about-us .directory .img-holder::after {
+    content: "";
+    width: 100px;
+    height: 150px;
+    background-color: var(--purple);
+    position: absolute;
+    top: -20px;
+    right: 5px;
+    z-index: -2;
+}
+.about-us .directory .img-holder img {
+    width: 90%;
 }
 @media (max-width: 768px) {
     .about-us h3,
