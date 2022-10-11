@@ -251,6 +251,7 @@ header .header-contact {
     font-weight: 500;
     text-align: right;
 }
+/* test */
 header .header-contact i {
     margin-left: 20px;
     color: var(--purple);
