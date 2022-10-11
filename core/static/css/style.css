@@ -219,7 +219,7 @@ header {
     color: var(--black);
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow: 0 3px 4px rgb(0 0 0 / 7%);
-    height: 100px;
+    height: 120px;
     position: fixed;
     right: 0;
     left: 0;
@@ -229,7 +229,7 @@ header {
 }
 header .logo a {
     display: inline-block;
-    height: 100px;
+    height: 120px;
 }
 header .logo img {
     display: inline-block;
@@ -239,6 +239,17 @@ header .logo img {
 header .col-10 {
     display: flex;
     flex-direction: column;   
+}
+header .header-contact {
+    margin-right: 15px;
+    padding: 25px 0;
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-align: right;
+}
+header .header-contact i {
+    margin-left: 20px;
+    color: var(--purple);
 }
 header .primary-menu {
     height: 100%;
@@ -255,7 +266,7 @@ header .primary-menu ul li a {
     color: inherit;
     font-size: 1.6rem;
     font-weight: 700;
-    padding: 0 5px 30px;
+    padding: 0 5px 20px;
     margin-right: 10px;
     position: relative;
 }
@@ -266,7 +277,7 @@ header .primary-menu ul li a.active::after {
     bottom: 0;
     left: 0;
     width: 0;
-    height: 3px;
+    height: 4px;
     background-color: var(--purple);
     transition: ease 0.5s;
 }
@@ -276,7 +287,8 @@ header .primary-menu ul li a.active::after {
 }
 
 @media (max-width: 992px) {
-    header .primary-menu {
+    header .primary-menu,
+    header .header-contact {
         display: none;
     }
     header .nav-contact {
@@ -684,7 +696,7 @@ footer .copyright a {
 
 /************************ OTHER PAGES ************************/
 .banner.single-page-banner .banner-bg {
-    height: 240px;
+    height: 260px;
     background-color: var(--purple);
     display: flex;
     justify-content: center;
@@ -694,7 +706,7 @@ footer .copyright a {
     content: none;
 }
 .banner.single-page-banner .caption {
-    margin-top: 100px;
+    margin-top: 120px;
     color: #fff;
 }
 .banner.single-page-banner .caption h2 {
