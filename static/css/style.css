@@ -1,6 +1,5 @@
 :root{
-    --purple: #9D41B6;
-    --green: #BAD330;
+    --blue: #22449d;
     --black: #222222;
     --white: #FFFFFF;
 }
@@ -38,15 +37,15 @@ a {
     color: var(--black);
 }
 .btn-white:hover {
-    background-color: var(--purple);
+    background-color: var(--blue);
     color: var(--white);
 }
 .btn-purple {
-    background-color: var(--purple);
+    background-color: var(--blue);
     color: var(--white);
 }
 .btn-purple:hover {
-    background-color: #89349e;
+    background-color: #19357c;
     color: var(--white);
 }
 
@@ -64,7 +63,7 @@ a {
     display: block;
     width: 40px;
     height: 35px;
-    background-color: var(--purple);
+    background-color: var(--blue);
     bottom: 45px;
     right: 30px;
     opacity: 0;
@@ -169,7 +168,7 @@ a {
     height: 100%;
     width: 90%;
     max-width: 400px;
-    background-color: var(--purple);
+    background-color: var(--blue);
     overflow: auto;
     z-index: 1001;
     transform: translateZ(0);
@@ -251,7 +250,7 @@ header .header-contact {
 }
 header .header-contact i {
     margin-left: 20px;
-    color: var(--purple);
+    color: var(--blue);
 }
 header .primary-menu {
     height: 100%;
@@ -280,7 +279,7 @@ header .primary-menu ul li a.active::after {
     left: 0;
     width: 0;
     height: 4px;
-    background-color: var(--purple);
+    background-color: var(--blue);
     transition: ease 0.5s;
 }
 header .primary-menu ul li a:hover::after,
@@ -384,7 +383,7 @@ header .primary-menu ul li a.active::after {
     cursor:default;
 }
 .about-us .carousel-item:hover h4 {
-    color: var(--purple);
+    color: var(--blue);
 }
 .about-us .carousel-indicators {
     justify-content: flex-start;
@@ -396,7 +395,7 @@ header .primary-menu ul li a.active::after {
     height: 15px;
     border-bottom: 0;
     border-top: 0;
-    background-color: var(--purple);
+    background-color: var(--blue);
     border-radius: 100%;
 }
 .about-us .image-holder {
@@ -409,7 +408,7 @@ header .primary-menu ul li a.active::after {
     right: -30px;
     width: 200px;
     height: 250px;
-    background-color: var(--purple);
+    background-color: var(--blue);
     opacity: 0.7;
     transition: ease 0.5s;
 }
@@ -429,7 +428,7 @@ header .primary-menu ul li a.active::after {
     content: "";
     width: 100px;
     height: 150px;
-    background-color: var(--purple);
+    background-color: var(--blue);
     position: absolute;
     top: -20px;
     right: 5px;
@@ -469,7 +468,7 @@ header .primary-menu ul li a.active::after {
     padding: 100px 0 50px;
 }
 .services h4 {
-    color: var(--purple);
+    color: var(--blue);
     font-weight: 700;
     font-size: 1.8rem;
     margin-bottom: 15px;
@@ -509,7 +508,7 @@ header .primary-menu ul li a.active::after {
     text-align: center;
 }
 .services .service-item:hover .service__overlay {
-    background-color: rgba(159, 64, 184, 0.7);
+    background-color: rgba(34, 68, 157, 0.7);
 }
 .services .service__overlay i {
     font-size: 6rem;
@@ -593,7 +592,7 @@ header .primary-menu ul li a.active::after {
     transition: 0.5s;
 }
 .section .card:hover .card-body .card-title {
-    color: var(--purple);
+    color: var(--blue);
 }
 .section .card .card-body .card-text {
     font-size: 1.6rem;
@@ -609,7 +608,7 @@ header .primary-menu ul li a.active::after {
     color: var(--black);
 }
 .partners-customers-section .line::after {
-    background-color: var(--purple);
+    background-color: var(--blue);
 }
 .partners-customers-section .image-holder img {
     width: 100%;
@@ -627,7 +626,7 @@ header .primary-menu ul li a.active::after {
     left: 0;
     right: 0;
     z-index: -1;
-    background-color: var(--purple);
+    background-color: var(--blue);
 }
 .projects-section h3 {
     color: var(--white);
@@ -645,7 +644,7 @@ header .primary-menu ul li a.active::after {
     color: var(--black);
 }
 .news-section .line::after {
-    background-color: var(--purple);
+    background-color: var(--blue);
 }
 .news-section .line ~ p {
     width: 50%;
@@ -659,7 +658,7 @@ header .primary-menu ul li a.active::after {
 .news-section .card .card-body span {
     display: inline-block;
     font-size: 1.2rem;
-    color: var(--purple);
+    color: var(--blue);
     margin-bottom: 8px;
 }
 .news-section .card .card-body .read-more {
@@ -674,11 +673,11 @@ header .primary-menu ul li a.active::after {
 .news-section .card .card-body .read-more::after {
     width: 0;
     height: 3px;
-    background-color: var(--purple);
+    background-color: var(--blue);
     transition: ease 0.5s;
 }
 .news-section .card:hover .card-body .read-more {
-    color: var(--purple);
+    color: var(--blue);
 }
 
 @media (max-width: 992px) {
@@ -702,7 +701,7 @@ header .primary-menu ul li a.active::after {
 /************************ FOOTER ************************/
 footer {
     padding: 50px 0 0;
-    background-color: var(--purple);
+    background-color: var(--blue);
     color: var(--white);
     margin-top: 50px;
 }
@@ -746,7 +745,7 @@ footer .copyright a {
 /************************ OTHER PAGES ************************/
 .banner.single-page-banner .banner-bg {
     height: 260px;
-    background-color: var(--purple);
+    background-color: var(--blue);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -793,7 +792,7 @@ footer .copyright a {
 
 /************************ PARTNERS & CUSTOMERS PAGE ************************/
 #partners-and-customers-page .line::after {
-    background-color: var(--purple);
+    background-color: var(--blue);
     left: 0;
     transform: none;
 }
@@ -870,7 +869,7 @@ footer .copyright a {
     font-weight: normal;
     text-transform: uppercase;
     position: relative;
-    background-color: var(--purple);
+    background-color: var(--blue);
     color: var(--white);
 }
 
@@ -886,7 +885,7 @@ footer .copyright a {
 }
 #projects-page .pagination .page-item .page-link,
 #news-page .pagination .page-item .page-link {
-    color: var(--purple);
+    color: var(--blue);
     font-size: 1.5rem;
 }
 #projects-page .pagination .page-item .page-link.active,
@@ -905,7 +904,7 @@ footer .copyright a {
 /************************ PROJECTS DETAILS PAGE ************************/
 /************************ NEWS DETAILS PAGE ************************/
 .sidebar {
-    background-color: var(--purple);
+    background-color: var(--blue);
     color: var(--white);
     padding: 20px;
 }
@@ -1017,7 +1016,7 @@ footer .copyright a {
     cursor: pointer;
     font-size: 3rem;
     color: var(--white);
-    background-color: var(--purple);
+    background-color: var(--blue);
     width: 80px;
     height: 80px;
     border-radius: 100%;
@@ -1057,12 +1056,12 @@ footer .copyright a {
     padding: 10px 15px;
     margin-bottom: 20px;
     border-radius: 10px;
-    border: 1px solid var(--purple);
+    border: 1px solid var(--blue);
     outline: none;
 }
 .contact-form input:focus,
 .contact-form textarea:focus  {
-    outline: 1px solid var(--purple);
+    outline: 1px solid var(--blue);
 }
 
 .mapouter iframe {
