@@ -28,8 +28,8 @@ SECRET_KEY = 'django-insecure-xzt0)1fdff1j8-mc2z^=p(or1^wdzl_5#y4i=gpbv8mqd)1abo
 
 # PROD = not DEBUG
 
-DEBUG = True
-
+DEBUG = False if os.environ.get('DEBUG') else True
+PROD = not DEBUG
 
 ALLOWED_HOSTS = ['*']
 
@@ -162,9 +162,14 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
-
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+if PROD:
+    STATIC_ROOT = os.path.join(BASE_DIR, "./staticfiles/")
+else:
+    STATICFILES_DIRS = [
+        os.path.join(BASE_DIR, "./staticfiles/")
+    ]
 
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # if PROD:
@@ -173,6 +178,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 #     STATICFILES_DIRS = [
 #         os.path.join(BASE_DIR, "static")
 #     ]
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 # Default primary key field type
