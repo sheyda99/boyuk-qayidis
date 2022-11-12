@@ -1,24 +1,77 @@
-version: '3'
-services:  
-    postgres:
-        container_name: postgres_data
-        image: postgres:9.6
-        ports: 
-            - 5432:5432
+version: '3.1'
+
+services: 
+    nginx-proxy:
+        image: jwilder/nginx-proxy
+        restart: "always"
+        ports:
+            - "80:80"
         volumes:
-            - ../pgdb:/var/lib/postgresql/data
+            - /var/run/docker.sock:/tmp/docker.sock:ro
+            - ./nginx/vhost/:/etc/nginx/vhost.d:ro
+            - ./nginx/conf.d/client_max_body_size.conf:/etc/nginx/conf.d/client_max_body_size.conf:ro
+            - ./nginx/proxy.conf/:/etc/nginx/proxy.conf
+            - ./static/:/boyuk_qayidish/static
+            - ./media/:/boyuk_qayidish/media
+    postgres:
+        image: postgres:9.6.6
+        restart: always
+        volumes:
+            - ./pgdb/:/var/lib/postgresql/data
+        ports:
+            - "5432:5432"
         env_file: ./.env
 
+
     web:
+        container_name: postgres_data
         build: .
         restart: "always"
         ports:
-            - "80:8000"
-        command: python manage.py runserver 0.0.0.0:8000
+            - "8000:8000"
+        
         volumes:
             - .:/code/
-            - ./static/:/code/static/
-            - ./media/:/code/media/
-        env_file: ./.env
+            # - ./static/:/code/static
+            # - ./media/:/code/media
         depends_on:
             - "postgres"
+        env_file: .env
+
+# networks:
+#   default:
+#     external:
+#       name: nginx-proxy 
+
+
+
+
+
+
+
+
+
+# version: '3'
+# services:  
+#     postgres:
+#         container_name: postgres_data
+#         image: postgres:9.6
+#         ports: 
+#             - 5432:5432
+#         volumes:
+#             - ../pgdb:/var/lib/postgresql/data
+#         env_file: ./.env
+
+#     web:
+#         build: .
+#         restart: "always"
+#         ports:
+#             - "80:8000"
+#         command: python manage.py runserver 0.0.0.0:8000
+#         volumes:
+#             - .:/code/
+#             - ./static/:/code/static/
+#             - ./media/:/code/media/
+#         env_file: ./.env
+#         depends_on:
+#             - "postgres"
