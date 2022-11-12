@@ -10,13 +10,13 @@ from django.utils.text import slugify
 class News(models.Model):
 
     # information
-    image = models.ImageField('Əsas Şəkil', upload_to = 'media/news')
+    image = models.ImageField('Əsas Şəkil', upload_to = 'news')
     title = models.CharField('Başlıq', max_length = 256)
-    image1 = models.ImageField('Şəkil1', upload_to = 'media/news', null=True, blank=True)
-    image2 = models.ImageField('Şəkil2', upload_to = 'media/news', null=True, blank=True)
-    image3 = models.ImageField('Şəkil3', upload_to = 'media/news', null=True, blank=True)
-    image4 = models.ImageField('Şəkil4', upload_to = 'media/news', null=True, blank=True)
-    image5 = models.ImageField('Şəkil5', upload_to = 'media/news', null=True, blank=True)
+    image1 = models.ImageField('Şəkil1', upload_to = 'news', null=True, blank=True)
+    image2 = models.ImageField('Şəkil2', upload_to = 'news', null=True, blank=True)
+    image3 = models.ImageField('Şəkil3', upload_to = 'news', null=True, blank=True)
+    image4 = models.ImageField('Şəkil4', upload_to = 'news', null=True, blank=True)
+    image5 = models.ImageField('Şəkil5', upload_to = 'news', null=True, blank=True)
     description1 = models.TextField('Qısa məzmun', max_length = 2000)
     description2 = models.TextField('Məzmun1', max_length = 2000, null=True, blank=True)
     description3 = models.TextField('Məzmun2', max_length = 2000, null=True, blank=True)

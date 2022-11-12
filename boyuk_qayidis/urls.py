@@ -53,3 +53,4 @@ urlpatterns = [
     path('projects_detail/<slug:slug>/', projects_details, name='projects_detail'),
     path('contact/', contact, name='contact')
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+

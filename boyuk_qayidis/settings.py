@@ -31,7 +31,10 @@ SECRET_KEY = 'django-insecure-xzt0)1fdff1j8-mc2z^=p(or1^wdzl_5#y4i=gpbv8mqd)1abo
 DEBUG = False if os.environ.get('DEBUG') else True
 PROD = not DEBUG
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    '*',
+    'boyukqayidish.com'
+    ]
 
 # Application definition
 
@@ -89,8 +92,8 @@ WSGI_APPLICATION = 'boyuk_qayidis.wsgi.application'
 import time
 time.sleep(2)
 
-# if PROD:
-DATABASES = {
+if PROD:
+    DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
             'NAME': os.getenv('POSTGRES_DB', 'boyuk_qayidis'),
@@ -100,22 +103,18 @@ DATABASES = {
             'HOST': os.getenv('POSTGRES_HOST', '127.0.0.1'),
             'PORT': os.environ.get('POSTGRES_PORT', '5432')
         }
-    #     'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': BASE_DIR / 'db.sqlite3',
-    # }
     }
-# else:
-#     DATABASES = {
-#         'default': {
-#             'ENGINE': 'django.db.backends.postgresql',
-#             'NAME': 'boyuk_qayidis',
-#             'USER': 'boyuk_qayidis',
-#             'PORT': 5432,
-#             'PASSWORD': '12345',
-#             'HOST': '127.0.0.1',
-#         }
-#     }
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'boyuk_qayidis',
+            'USER': 'boyuk_qayidis',
+            'PORT': 5432,
+            'PASSWORD': '12345',
+            'HOST': '127.0.0.1',
+        }
+    }
 
 
 
