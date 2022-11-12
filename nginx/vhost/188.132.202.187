@@ -1,7 +1,7 @@
 location /static/ {
-    alias /boyuk_qayidish/static/;
+    alias /code/static/;
 }
 
 location /media/ {
-    alias /boyuk_qayidish/media/;
+    alias /code/media/;
 }
