@@ -28,8 +28,10 @@ SECRET_KEY = 'django-insecure-xzt0)1fdff1j8-mc2z^=p(or1^wdzl_5#y4i=gpbv8mqd)1abo
 
 # PROD = not DEBUG
 
-DEBUG = False if os.environ.get('DEBUG') else True
-PROD = not DEBUG
+# DEBUG = False if os.environ.get('DEBUG') else True
+# PROD = not DEBUG
+
+DEBUG = True
 
 ALLOWED_HOSTS = [
     '*',
@@ -92,29 +94,29 @@ WSGI_APPLICATION = 'boyuk_qayidis.wsgi.application'
 import time
 time.sleep(2)
 
-if PROD:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': os.getenv('POSTGRES_DB', 'boyuk_qayidis'),
-            'USER': os.getenv('POSTGRES_USER', 'boyuk_qayidis'),
-            'PORT': os.getenv('POSTGRES_PORT', 5432),
-            'PASSWORD': os.getenv('POSTGRES_PASSWORD', '12345'),
-            'HOST': os.getenv('POSTGRES_HOST', '127.0.0.1'),
-            'PORT': os.environ.get('POSTGRES_PORT', '5432')
-        }
+# if PROD:
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.getenv('POSTGRES_DB', 'boyuk_qayidis'),
+        'USER': os.getenv('POSTGRES_USER', 'boyuk_qayidis'),
+        'PORT': os.getenv('POSTGRES_PORT', 5432),
+        'PASSWORD': os.getenv('POSTGRES_PASSWORD', '12345'),
+        'HOST': os.getenv('POSTGRES_HOST', '127.0.0.1'),
+        'PORT': os.environ.get('POSTGRES_PORT', '5432')
     }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'boyuk_qayidis',
-            'USER': 'boyuk_qayidis',
-            'PORT': 5432,
-            'PASSWORD': '12345',
-            'HOST': '127.0.0.1',
-        }
-    }
+}
+# else:
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.postgresql',
+#             'NAME': 'boyuk_qayidis',
+#             'USER': 'boyuk_qayidis',
+#             'PORT': 5432,
+#             'PASSWORD': '12345',
+#             'HOST': '127.0.0.1',
+#         }
+#     }
 
 
 
@@ -164,13 +166,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 STATIC_URL = '/static/'
-
-if PROD:
-    STATIC_ROOT = os.path.join(BASE_DIR, "/static")
-else:
-    STATICFILES_DIRS = [
-        os.path.join(BASE_DIR, "./static/")
-    ]
+STATICFILES_DIRS = [
+    BASE_DIR / "static"
+]
+# if PROD:
+#     STATIC_ROOT = os.path.join(BASE_DIR, "/static")
+# else:
+#     STATICFILES_DIRS = [
+#         os.path.join(BASE_DIR, "./static/")
+#     ]
 
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # if PROD:
@@ -180,9 +184,9 @@ else:
 #         os.path.join(BASE_DIR, "static")
 #     ]
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
-
+MEDIA_ROOT = (
+    os.path.join(BASE_DIR, 'media')
+)
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
