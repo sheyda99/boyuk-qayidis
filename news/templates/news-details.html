@@ -71,6 +71,10 @@
                             {% if news.image5 %}
                             <img src="{{ news.image5.url }}" alt="News image 5">
                             {% endif %}
+
+                            {% if news.pdf %}
+                            <a href="{{ news.pdf.url }}">{{news.pdf_title}}</a>
+                            {% endif %}
                         </div>
                     </div>
 
