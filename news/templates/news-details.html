@@ -51,12 +51,15 @@
                             <p>{{news.description5}}</p>
                             {% endif %}
 
+                            {% if news.pdf %}
+                            <p class="read-more-pdf my-5"><b>Link:</b> <a href="{{ news.pdf.url }}">{{news.pdf_title}}</a></p>
+                            {% endif %}
+
                             {% if news.image1 %}
                             <img src="{{ news.image1.url }}" alt="News image 1">
                             {% endif %}
 
                             {% if news.image2 %}
-                            <!-- -------------------------------- -->
                             <img src="{{ news.image2.url }}" alt="News image 2">
                             {% endif %}
 
@@ -70,10 +73,6 @@
 
                             {% if news.image5 %}
                             <img src="{{ news.image5.url }}" alt="News image 5">
-                            {% endif %}
-
-                            {% if news.pdf %}
-                            <a href="{{ news.pdf.url }}">{{news.pdf_title}}</a>
                             {% endif %}
                         </div>
                     </div>

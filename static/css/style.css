@@ -904,6 +904,13 @@ footer .copyright a {
 
 /************************ PROJECTS DETAILS PAGE ************************/
 /************************ NEWS DETAILS PAGE ************************/
+.read-more-pdf a {
+    color: var(--blue);
+}
+.read-more-pdf a:hover {
+    text-decoration: underline;
+}
+
 .sidebar {
     background-color: var(--blue);
     color: var(--white);
